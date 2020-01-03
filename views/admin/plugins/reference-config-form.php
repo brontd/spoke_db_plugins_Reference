@@ -144,6 +144,19 @@
             </p>
         </div>
     </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('reference_hide_empty',
+                __('Hide empty references')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <?php echo $this->formCheckbox('reference_hide_empty', true,
+                array('checked' => (boolean) get_option('reference_hide_empty'))); ?>
+            <p class="explanation">
+                <?php echo __('When a reference has no items, hides the correspondent link.'); ?>
+            </p>
+        </div>
+    </div>
 </fieldset>
 <fieldset id="fieldset-reference-tree"><legend><?php echo __('Hierarchy of Subjects'); ?></legend>
     <div class="field">
