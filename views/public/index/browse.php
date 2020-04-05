@@ -4,6 +4,7 @@ echo head(array(
     'title' => $pageTitle,
     'bodyclass' => 'reference',
 ));
+$reference_hide_empty = (boolean) get_option('reference_hide_empty');
 ?>
 <div id="primary">
     <h1><?php echo $pageTitle; ?></h1>
@@ -18,13 +19,15 @@ echo head(array(
         <ul class='references'>
         <?php foreach ($references as $slug => $slugData): ?>
             <li><?php
-                echo sprintf(
-                    '<a href="%s" title="%s">%s (%d)</a>',
-                    html_escape(url(array('slug' => $slug), 'reference_list')),
-                    __('Browse %s', $slugData['label']),
-                    $slugData['label'],
-                    $this->reference()->count($slug)
-                );
+                if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
+                    echo sprintf(
+                        '<a href="%s" title="%s">%s (%d)</a>',
+                        html_escape(url(array('slug' => $slug), 'reference_list')),
+                        __('Browse %s', $slugData['label']),
+                        $slugData['label'],
+                        $this->reference()->count($slug)
+                    );
+                endif;
             ?>
             </li>
         <?php endforeach; ?>
@@ -49,13 +52,15 @@ echo head(array(
             ?><ul>
             <?php endif; ?>
             <li><?php
-                echo sprintf(
-                    '<a href="%s" title="%s">%s (%d)</a>',
-                    html_escape(url(array('slug' => $slug), 'reference_list')),
-                    __('Browse %s', $slugData['label']),
-                    $slugData['label'],
-                    $this->reference()->count($slug)
-                );
+                if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
+                    echo sprintf(
+                        '<a href="%s" title="%s">%s (%d)</a>',
+                        html_escape(url(array('slug' => $slug), 'reference_list')),
+                        __('Browse %s', $slugData['label']),
+                        $slugData['label'],
+                        $this->reference()->count($slug)
+                    );
+                endif;
             ?>
             </li>
         <?php endforeach; ?>
