@@ -22,8 +22,7 @@ if (count($subjects)):
                 // not known yet).
                 if ($key == 0) {
                     // Nothing for the first level.
-                }
-                elseif ($level > $previous_level) {
+                } elseif ($level > $previous_level) {
                     // Deeper level is always the next one.
                 }
                 // Higher level.
@@ -40,15 +39,18 @@ if (count($subjects)):
                     // Deeper level is always the next one.
                     echo PHP_EOL . '<div class="expander' . ($expanded ? ' expanded' : '') . '"></div>';
                     echo '<ul' . ($expanded ? ' class="expanded"' : '') . '><li>';
-                }
-                else {
+                } else {
                     echo '<li>';
                 }
 
                 if (empty($options['raw'])):
                     echo '<a href="'
-                        . url(sprintf('items/browse?advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
-                            $referenceId, $queryType, urlencode($subject)))
+                        . url(sprintf(
+                            'items/browse?advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
+                            $referenceId,
+                            $queryType,
+                            urlencode($subject)
+                        ))
                         . '">'
                         . $subject
                         . '</a>';

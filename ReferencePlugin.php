@@ -178,7 +178,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
         $orderedSlugs = array();
         foreach (array(
                 'ItemType' => $itemTypes,
-                'Element' =>$elementNamesById,
+                'Element' => $elementNamesById,
             ) as $type => $list) {
             foreach ($list as $id => $name) {
                 foreach ($slugs as $slug => $slugData) {
@@ -225,8 +225,6 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 
     /**
      * Processes the configuration form.
-     *
-     * @return void
      */
     public function hookConfig($args)
     {
@@ -271,7 +269,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 
         foreach ($this->_options as $optionKey => $optionValue) {
             if (in_array($optionKey, array('reference_slugs'))) {
-               $post[$optionKey] = json_encode($post[$optionKey]) ?: json_encode($optionValue);
+                $post[$optionKey] = json_encode($post[$optionKey]) ?: json_encode($optionValue);
             }
             if (isset($post[$optionKey])) {
                 set_option($optionKey, $post[$optionKey]);
@@ -285,7 +283,9 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
     public function hookDefineRoutes($args)
     {
         $args['router']->addConfig(new Zend_Config_Ini(
-            dirname(__FILE__) . DIRECTORY_SEPARATOR . 'routes.ini', 'routes'));
+            dirname(__FILE__) . DIRECTORY_SEPARATOR . 'routes.ini',
+            'routes'
+        ));
     }
 
     public function hookPublicHead($args)
@@ -301,13 +301,13 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
     public function filterPublicNavigationMain($nav)
     {
         $nav[] = array(
-            'label'=>__('References'),
+            'label' => __('References'),
             'uri' => url(array(), 'reference_base'),
         );
 
         if (get_option('reference_tree_enabled')) {
             $nav[] = array(
-                'label'=>__('Subjects Tree'),
+                'label' => __('Subjects Tree'),
                 'uri' => url(array(), 'reference_tree'),
             );
         }

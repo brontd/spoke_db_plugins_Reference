@@ -33,7 +33,7 @@ if (count($references)):
 
 <div id="reference-headings">
     <?php
-    $linkSingle = (boolean) get_option('reference_link_to_single');
+    $linkSingle = (bool) get_option('reference_link_to_single');
     $current_heading = '';
     $current_id = '';
     foreach ($references as $reference => $referenceData):
@@ -64,8 +64,12 @@ if (count($references)):
                 if ($slugData['type'] == 'ItemType'):
                     $url .= 'type=' . $slugData['id'] . '&amp;';
                 endif;
-                $url .= sprintf('advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
-                    $referenceId, $queryType, urlencode($reference));
+                $url .= sprintf(
+                    'advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
+                    $referenceId,
+                    $queryType,
+                    urlencode($reference)
+                );
                 echo '<a href="' . url($url) . '">' . $reference . '</a>';
                 // Can be null when references are set directly.
                 if ($referenceData['count']):

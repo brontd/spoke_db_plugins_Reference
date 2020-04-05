@@ -67,20 +67,24 @@
                         <td><?php echo $record->name; ?></td>
                         <td class="reference-boxes">
                             <?php echo $this->formCheckbox(
-                                'actives' . $idKey,
-                                true,
-                                array('checked' => (boolean) $slugData['active'])
+                        'actives' . $idKey,
+                        true,
+                        array('checked' => (bool) $slugData['active'])
                             ); ?>
                         </td>
                         <td class="reference-boxes">
                             <?php echo $this->formText(
                                 'slugs' . $idKey,
-                                $slug, null); ?>
+                                $slug,
+                                null
+                            ); ?>
                         </td>
                         <td class="reference-boxes">
                             <?php echo $this->formText(
-                                'labels' . $idKey,
-                                $slugData['label'], null); ?>
+                                    'labels' . $idKey,
+                                    $slugData['label'],
+                                    null
+                                ); ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -90,12 +94,17 @@
     </div>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_list_skiplinks',
-                __('Print skip links')); ?>
+            <?php echo $this->formLabel(
+                                    'reference_list_skiplinks',
+                                    __('Print skip links')
+                                ); ?>
         </div>
         <div class="inputs five columns omega">
-            <?php echo $this->formCheckbox('reference_list_skiplinks', true,
-                array('checked' => (boolean) get_option('reference_list_skiplinks'))); ?>
+            <?php echo $this->formCheckbox(
+                    'reference_list_skiplinks',
+                    true,
+                    array('checked' => (bool) get_option('reference_list_skiplinks'))
+                ); ?>
             <p class="explanation">
                 <?php echo __('Print skip links at the top and bottom of each page, which link to the alphabetical headers.'); ?>
                 <?php echo __('Note that if headers are turned off, skiplinks do not work.'); ?>
@@ -104,12 +113,17 @@
     </div>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_list_headings',
-                __('Print headings')); ?>
+            <?php echo $this->formLabel(
+                    'reference_list_headings',
+                    __('Print headings')
+                ); ?>
         </div>
         <div class="inputs five columns omega">
-            <?php echo $this->formCheckbox('reference_list_headings', true,
-                array('checked' => (boolean) get_option('reference_list_headings'))); ?>
+            <?php echo $this->formCheckbox(
+                    'reference_list_headings',
+                    true,
+                    array('checked' => (bool) get_option('reference_list_headings'))
+                ); ?>
             <p class="explanation">
                 <?php echo __('Print headers for each section (#0-9 and symbols, A, B, etc.)'); ?>
             </p>
@@ -133,12 +147,17 @@
     </div>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_link_to_single',
-                __('Link to Single Records')); ?>
+            <?php echo $this->formLabel(
+                'reference_link_to_single',
+                __('Link to Single Records')
+            ); ?>
         </div>
         <div class="inputs five columns omega">
-            <?php echo $this->formCheckbox('reference_link_to_single', true,
-                array('checked' => (boolean) get_option('reference_link_to_single'))); ?>
+            <?php echo $this->formCheckbox(
+                    'reference_link_to_single',
+                    true,
+                    array('checked' => (bool) get_option('reference_link_to_single'))
+                ); ?>
             <p class="explanation">
                 <?php echo __('When a reference has only one item, link to it directly instead of to the items/browse page.'); ?>
             </p>
@@ -148,26 +167,38 @@
 <fieldset id="fieldset-reference-tree"><legend><?php echo __('Hierarchy of Subjects'); ?></legend>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_tree_enabled',
-                __('Enable tree view')); ?>
+            <?php echo $this->formLabel(
+                    'reference_tree_enabled',
+                    __('Enable tree view')
+                ); ?>
         </div>
         <div class="inputs five columns omega">
-            <?php echo $this->formCheckbox('reference_tree_enabled', true,
-                array('checked' => (boolean) get_option('reference_tree_enabled'))); ?>
+            <?php echo $this->formCheckbox(
+                    'reference_tree_enabled',
+                    true,
+                    array('checked' => (bool) get_option('reference_tree_enabled'))
+                ); ?>
             <p class="explanation">
-                <?php echo __('Enable the page and display the link "%s" to the hierarchical view in the navigation bar.',
-                    '<a href="' . url(ReferencePlugin::REFERENCE_PATH_TREE) . '">' . url(ReferencePlugin::REFERENCE_PATH_TREE) . '</a>'); ?>
+                <?php echo __(
+                    'Enable the page and display the link "%s" to the hierarchical view in the navigation bar.',
+                    '<a href="' . url(ReferencePlugin::REFERENCE_PATH_TREE) . '">' . url(ReferencePlugin::REFERENCE_PATH_TREE) . '</a>'
+                ); ?>
             </p>
         </div>
     </div>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_tree_expanded',
-                __('Expand tree')); ?>
+            <?php echo $this->formLabel(
+                        'reference_tree_expanded',
+                        __('Expand tree')
+                    ); ?>
         </div>
         <div class="inputs five columns omega">
-            <?php echo $this->formCheckbox('reference_tree_expanded', true,
-                array('checked' => (boolean) get_option('reference_tree_expanded'))); ?>
+            <?php echo $this->formCheckbox(
+                    'reference_tree_expanded',
+                    true,
+                    array('checked' => (bool) get_option('reference_tree_expanded'))
+                ); ?>
             <p class="explanation">
                 <?php echo __('Check this box to display the tree expanded.'); ?>
                 <?php echo __('This option can be overridden by the theme.'); ?>
@@ -176,8 +207,10 @@
     </div>
     <div class="field">
         <div class="two columns alpha">
-            <?php echo $this->formLabel('reference_tree_hierarchy',
-                __('Set the hierarchy of subjects')); ?>
+            <?php echo $this->formLabel(
+                    'reference_tree_hierarchy',
+                    __('Set the hierarchy of subjects')
+                ); ?>
         </div>
         <div class="inputs five columns omega">
            <div class='input-block'>

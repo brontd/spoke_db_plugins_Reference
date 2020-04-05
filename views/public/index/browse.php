@@ -18,7 +18,8 @@ echo head(array(
         <ul class='references'>
         <?php foreach ($references as $slug => $slugData): ?>
             <li><?php
-                echo sprintf('<a href="%s" title="%s">%s (%d)</a>',
+                echo sprintf(
+                    '<a href="%s" title="%s">%s (%d)</a>',
                     html_escape(url(array('slug' => $slug), 'reference_list')),
                     __('Browse %s', $slugData['label']),
                     $slugData['label'],
@@ -48,7 +49,8 @@ echo head(array(
             ?><ul>
             <?php endif; ?>
             <li><?php
-                echo sprintf('<a href="%s" title="%s">%s (%d)</a>',
+                echo sprintf(
+                    '<a href="%s" title="%s">%s (%d)</a>',
                     html_escape(url(array('slug' => $slug), 'reference_list')),
                     __('Browse %s', $slugData['label']),
                     $slugData['label'],
