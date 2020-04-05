@@ -17,20 +17,19 @@ $reference_hide_empty = (boolean) get_option('reference_hide_empty');
         <?php
     if (count($types) == 1): ?>
         <ul class='references'>
-        <?php foreach ($references as $slug => $slugData): ?>
-            <li><?php
-                if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
-                    echo sprintf(
-                        '<a href="%s" title="%s">%s (%d)</a>',
-                        html_escape(url(array('slug' => $slug), 'reference_list')),
-                        __('Browse %s', $slugData['label']),
-                        $slugData['label'],
-                        $this->reference()->count($slug)
-                    );
-                endif;
-            ?>
-            </li>
-        <?php endforeach; ?>
+        <?php foreach ($references as $slug => $slugData):
+            if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
+                echo '<li>';
+                echo sprintf(
+                    '<a href="%s" title="%s">%s (%d)</a>',
+                    html_escape(url(array('slug' => $slug), 'reference_list')),
+                    __('Browse %s', __($slugData['label'])),
+                    __($slugData['label']),
+                    $this->reference()->count($slug)
+                );
+                echo '</li>';
+            endif;
+        endforeach; ?>
         </ul>
     <?php else: ?>
         <ul class='references'>
@@ -51,18 +50,19 @@ $reference_hide_empty = (boolean) get_option('reference_hide_empty');
                 $type = $slugData['type'];
             ?><ul>
             <?php endif; ?>
-            <li><?php
-                if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
-                    echo sprintf(
-                        '<a href="%s" title="%s">%s (%d)</a>',
-                        html_escape(url(array('slug' => $slug), 'reference_list')),
-                        __('Browse %s', $slugData['label']),
-                        $slugData['label'],
-                        $this->reference()->count($slug)
-                    );
-                endif;
+            <?php
+            if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
+                echo '<li>';
+                echo sprintf(
+                    '<a href="%s" title="%s">%s (%d)</a>',
+                    html_escape(url(array('slug' => $slug), 'reference_list')),
+                    __('Browse %s', __($slugData['label'])),
+                    $slugData['label'],
+                    $this->reference()->count($slug)
+                );
+                echo '</li>';
+            endif;
             ?>
-            </li>
         <?php endforeach; ?>
         </ul></li>
     <?php endif; ?>
