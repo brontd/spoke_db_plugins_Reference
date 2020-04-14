@@ -1,0 +1,255 @@
+# Translation for the Reference plugin for Omeka.
+# This file is distributed under the same license as the Omeka plugin.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Reference\n"
+"Report-Msgid-Bugs-To: http://github.com/Daniel-KM/Reference/issues\n"
+"POT-Creation-Date: 2018-09-03 00:00+0200\n"
+"PO-Revision-Date: 2018-09-03 15:19+0200\n"
+"Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ReferencePlugin.php:244
+msgid "Some slugs are empty."
+msgstr "Alcuni slug sono vuoti."
+
+#: ReferencePlugin.php:245 ReferencePlugin.php:251
+msgid "Changes were reverted."
+msgstr "Le modifiche sono state annullate."
+
+#: ReferencePlugin.php:250
+msgid "Some slugs are not single."
+msgstr "Alcuni slug non sono univoci."
+
+#: ReferencePlugin.php:306 views/public/index/browse.php:2
+msgid "References"
+msgstr "Riferimenti"
+
+#: ReferencePlugin.php:312
+msgid "Subjects Tree"
+msgstr "Albero dei soggetti"
+
+#: ReferencePlugin.php:328
+msgid "Browse References"
+msgstr "Sfoglia per riferimento"
+
+#: ReferencePlugin.php:334 views/public/index/tree.php:2
+#: views/admin/plugins/reference-config-form.php:144
+msgid "Hierarchy of Subjects"
+msgstr "Gerarchia dei soggetti"
+
+#: views/public/index/list.php:2
+#, php-format
+msgid "Browse Items by \"%s\""
+msgstr "Sfoglia i documenti per \"%s\""
+
+#: views/public/index/list.php:8
+#, php-format
+msgid "Browse Items By \"%s\" (%d Headings)"
+msgstr "Sfoglia i documenti per \"%s\" (%d intestazioni)"
+
+#: views/public/index/list.php:18
+#, php-format
+msgid "There is no references for \"%s\"."
+msgstr "Non c'è alcun riferimento a \"%s\"."
+
+#: views/public/index/tree.php:8
+#, php-format
+msgid "Hierarchy of Subjects (%d total)"
+msgstr "Gerarchia dei soggetti (totale : %d)"
+
+#: views/public/index/tree.php:16
+msgid "There is no hierarchy of subjects."
+msgstr "Non c'è alcuna gerarchia dei soggetti."
+
+#: views/public/index/browse.php:14
+msgid "No references available."
+msgstr "Nessun riferimento disponibile."
+
+#: views/public/index/browse.php:22 views/public/index/browse.php:49
+#, php-format
+msgid "Browse %s"
+msgstr "Sfoglia %s"
+
+#: views/public/index/browse.php:43
+msgid "Main Types of Items"
+msgstr "Principali tipi di documento"
+
+#: views/public/index/browse.php:43
+msgid "Metadata"
+msgstr "Metadati"
+
+#: views/admin/plugins/reference-config-form.php:9
+msgid "Reference"
+msgstr "Riferimento"
+
+#: views/admin/plugins/reference-config-form.php:11
+msgid ""
+"Most of these options for list and for tree can be overridden in the theme."
+msgstr ""
+"La maggior parte di queste opzioni per liste ed alberi possono essere sovrascritte nel tema."
+
+#: views/admin/plugins/reference-config-form.php:14
+msgid "References Indexes"
+msgstr "Indici dei riferimenti"
+
+#: views/admin/plugins/reference-config-form.php:17
+msgid "Display References"
+msgstr "Mostra i riferimenti"
+
+#: views/admin/plugins/reference-config-form.php:21
+msgid ""
+"Select the elements to display and define a slug so the references will be "
+"available at \"references/:slug\"."
+msgstr ""
+"Seleziona gli elementi da mostrare e definisci uno slug così che i riferimenti "
+"saranno disponibili alla pagina \"references/:slug\"."
+
+#: views/admin/plugins/reference-config-form.php:22
+msgid "Slugs should be single."
+msgstr "Gli slug dovrebbero essere univoci."
+
+#: views/admin/plugins/reference-config-form.php:27
+msgid "Item Type / Element"
+msgstr "Tipo documento / elemento"
+
+#: views/admin/plugins/reference-config-form.php:28
+msgid "Display"
+msgstr "Mostra"
+
+#: views/admin/plugins/reference-config-form.php:29
+msgid "Slug"
+msgstr "Slug"
+
+#: views/admin/plugins/reference-config-form.php:30
+msgid "Label"
+msgstr "Etichetta"
+
+#: views/admin/plugins/reference-config-form.php:90
+msgid "Print skip links"
+msgstr "Inserire collegamenti 'vai a'"
+
+#: views/admin/plugins/reference-config-form.php:96
+msgid ""
+"Print skip links at the top and bottom of each page, which link to the "
+"alphabetical headers."
+msgstr ""
+"Inserisce in cima e in fondo ad ogni pagina dei collegamenti 'vai a', "
+"per andare alle intestazioni alfabetiche."
+
+#: views/admin/plugins/reference-config-form.php:97
+msgid "Note that if headers are turned off, skip links do not work."
+msgstr ""
+"Notare che, se le intestazioni sono disattivate, 'vai a' non funzionerà."
+
+#: views/admin/plugins/reference-config-form.php:104
+msgid "Print headings"
+msgstr "Inserire intestazioni"
+
+#: views/admin/plugins/reference-config-form.php:110
+msgid "Print headers for each section (#0-9 and symbols, A, B, etc.)"
+msgstr ""
+"Inserisce le intestazioni per ogni sezione (#0-9 e simboli, A, B, ecc.)"
+
+#: views/admin/plugins/reference-config-form.php:116
+msgid "Query Type"
+msgstr "Tipo di richiesta"
+
+#: views/admin/plugins/reference-config-form.php:121
+msgid "Is Exactly"
+msgstr "È esattamente"
+
+#: views/admin/plugins/reference-config-form.php:122
+msgid "Contains"
+msgstr "Contiene"
+
+#: views/admin/plugins/reference-config-form.php:126
+msgid ""
+"The type of query defines how elements are regrouped (see the advanced "
+"search)."
+msgstr ""
+"Il tipo di richiesta definisce come gli elementi vengono raggruppati (vedere la "
+"ricerca avanzata)."
+
+#: views/admin/plugins/reference-config-form.php:133
+msgid "Link to Single Records"
+msgstr "Collegamento a record isolati"
+
+#: views/admin/plugins/reference-config-form.php:139
+msgid ""
+"When a reference has only one item, link to it directly instead of to the "
+"items/browse page."
+msgstr ""
+"Quando un riferimento contiene un solo documento, collega direttamente ad "
+"esso invece che alla pagina items/browse."
+
+#: views/admin/plugins/reference-config-form.php:150
+msgid "Hide empty references"
+msgstr "Nascondi riferimenti vuoti"
+
+#: views/admin/plugins/reference-config-form.php:156
+msgid "When a reference has no items, hides the correspondent link."
+msgstr "Quando un riferimento non contiene alcun documento, nasconde il collegamento."
+
+#: views/admin/plugins/reference-config-form.php:166
+msgid "Show reference count"
+msgstr "Mostra conteggio riferimenti"
+
+#: views/admin/plugins/reference-config-form.php:172
+msgid "Shows reference count beside reference name."
+msgstr "Mostra il conteggio riferimenti a fianco del loro nome."
+
+#: views/admin/plugins/reference-config-form.php:182
+msgid "Enable tree view"
+msgstr "Attivare la vista ad albero"
+
+#: views/admin/plugins/reference-config-form.php:188
+#, php-format
+msgid ""
+"Enable the page and display the link \"%s\" to the hierarchical view in the "
+"navigation bar."
+msgstr ""
+"Attiva la pagina e aggiunge il collegamento \"%s\" alla vista gerarchica nella "
+"barra di navigazione."
+
+#: views/admin/plugins/reference-config-form.php:196
+msgid "Expand tree"
+msgstr "Espandere l'albero"
+
+#: views/admin/plugins/reference-config-form.php:202
+#, fuzzy
+msgid "Check this box to display the tree expanded."
+msgstr "Selezionare la casella per mostrare l'albero espanso."
+
+#: views/admin/plugins/reference-config-form.php:203
+msgid "This option can be overridden by the theme."
+msgstr "Questa opzione può essere superata dal tema."
+
+#: views/admin/plugins/reference-config-form.php:210
+msgid "Set the hierarchy of subjects"
+msgstr "Definire la gerarchia di soggetti"
+
+#: views/admin/plugins/reference-config-form.php:237
+msgid ""
+"If any, write the hierarchy of all your subjects in order to display them in "
+"the \"Hierarchy of Subjects\" page."
+msgstr ""
+"Se indicata, indica la gerarchia di tutti i soggetti per mostrarli nella pagina \"Albero dei soggetti\"."
+
+#: views/admin/plugins/reference-config-form.php:238
+msgid ""
+"Format is: one subject by line, preceded by zero, one or more \"-\" to "
+"indicate the hierarchy level. Separate the \"-\" and the subject with a "
+"space. Empty lines are not considered."
+msgstr ""
+"Il formato è: un soggetto per riga, preceduto da zero, uno o più  \"-\" "
+"per indicare il livello di gerarchia. Separare il \"-\" e il soggetto con "
+"uno spazio. Le righe vuote non vengono considerate."
