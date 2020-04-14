@@ -16,34 +16,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ReferencePlugin.php:244 ReferencePlugin.php:244
+#: ReferencePlugin.php:244
 msgid "Some slugs are empty."
 msgstr ""
 
-#: ReferencePlugin.php:245 ReferencePlugin.php:251 ReferencePlugin.php:245
-#: ReferencePlugin.php:251
+#: ReferencePlugin.php:245 ReferencePlugin.php:251
 msgid "Changes were reverted."
 msgstr ""
 
-#: ReferencePlugin.php:250 ReferencePlugin.php:250
+#: ReferencePlugin.php:250
 msgid "Some slugs are not single."
 msgstr ""
 
 #: ReferencePlugin.php:306 views/public/index/browse.php:2
-#: ReferencePlugin.php:306
 msgid "References"
 msgstr ""
 
-#: ReferencePlugin.php:312 ReferencePlugin.php:312
+#: ReferencePlugin.php:312
 msgid "Subjects Tree"
 msgstr ""
 
-#: ReferencePlugin.php:328 ReferencePlugin.php:328
+#: ReferencePlugin.php:328
 msgid "Browse References"
 msgstr ""
 
 #: ReferencePlugin.php:334 views/public/index/tree.php:2
-#: views/admin/plugins/reference-config-form.php:144 ReferencePlugin.php:334
+#: views/admin/plugins/reference-config-form.php:144
 msgid "Hierarchy of Subjects"
 msgstr ""
 
@@ -142,7 +140,7 @@ msgid ""
 msgstr ""
 
 #: views/admin/plugins/reference-config-form.php:97
-msgid "Note that if headers are turned off, skiplinks do not work."
+msgid "Note that if headers are turned off, skip links do not work."
 msgstr ""
 
 #: views/admin/plugins/reference-config-form.php:104
@@ -181,42 +179,59 @@ msgid ""
 "items/browse page."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:148
+#: views/admin/plugins/reference-config-form.php:150
+msgid "Hide empty references"
+msgstr ""
+
+#: views/admin/plugins/reference-config-form.php:156
+msgid "When a reference has no items, hides the correspondent link."
+msgstr ""
+
+#: views/admin/plugins/reference-config-form.php:166
+msgid "Show reference count"
+msgstr ""
+
+#: views/admin/plugins/reference-config-form.php:172
+msgid "Shows reference count beside reference name."
+msgstr ""
+
+#: views/admin/plugins/reference-config-form.php:182
 msgid "Enable tree view"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:154
+#: views/admin/plugins/reference-config-form.php:188
 #, php-format
 msgid ""
 "Enable the page and display the link \"%s\" to the hierarchical view in the "
 "navigation bar."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:162
+#: views/admin/plugins/reference-config-form.php:196
 msgid "Expand tree"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:168
+#: views/admin/plugins/reference-config-form.php:202
+#, fuzzy
 msgid "Check this box to display the tree expanded."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:169
+#: views/admin/plugins/reference-config-form.php:203
 msgid "This option can be overridden by the theme."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:176
+#: views/admin/plugins/reference-config-form.php:210
 msgid "Set the hierarchy of subjects"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:203
+#: views/admin/plugins/reference-config-form.php:237
 msgid ""
 "If any, write the hierarchy of all your subjects in order to display them in "
 "the \"Hierarchy of Subjects\" page."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:204
+#: views/admin/plugins/reference-config-form.php:238
 msgid ""
-"Format is: one subjet by line, preceded by zero, one or more \"-\" to "
+"Format is: one subject by line, preceded by zero, one or more \"-\" to "
 "indicate the hierarchy level. Separate the \"-\" and the subject with a "
 "space. Empty lines are not considered."
 msgstr ""
