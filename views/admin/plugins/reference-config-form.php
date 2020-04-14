@@ -6,15 +6,18 @@
     list-style: none outside none;
 }
 </style>
+
 <?php if (($max = (count($slugs) * 3 + 20)) > ini_get('max_input_vars')): ?>
 <p><strong style="color:red;"><?php echo __('WARNING'); ?></strong></p>
 <p><?php echo __('There are too many elements and this form cannot be saved. Remove unused elements or increase the parameter "max_input_vars" to %d or more in your php.ini.', $max); ?></p>
 <?php endif; ?>
+
 <fieldset id="fieldset-reference-general"><legend><?php echo __('Reference'); ?></legend>
     <p>
         <?php echo __('Most of these options for list and for tree can be overridden in the theme.'); ?>
     </p>
 </fieldset>
+
 <fieldset id="fieldset-reference-list"><legend><?php echo __('References Indexes'); ?></legend>
     <div class="field">
         <div>
@@ -80,7 +83,7 @@
                         <td class="reference-boxes">
                             <?php echo $this->formText(
                                 'labels' . $idKey,
-                                $slugData['label'], null); ?>
+                                __($slugData['label']), null); ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -98,7 +101,7 @@
                 array('checked' => (boolean) get_option('reference_list_skiplinks'))); ?>
             <p class="explanation">
                 <?php echo __('Print skip links at the top and bottom of each page, which link to the alphabetical headers.'); ?>
-                <?php echo __('Note that if headers are turned off, skiplinks do not work.'); ?>
+                <?php echo __('Note that if headers are turned off, skip links do not work.'); ?>
             </p>
         </div>
     </div>
@@ -144,7 +147,34 @@
             </p>
         </div>
     </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('reference_hide_empty',
+                __('Hide empty references')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <?php echo $this->formCheckbox('reference_hide_empty', true,
+                array('checked' => (boolean) get_option('reference_hide_empty'))); ?>
+            <p class="explanation">
+                <?php echo __('When a reference has no items, hides the correspondent link.'); ?>
+            </p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('reference_show_count',
+                __('Show reference count')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <?php echo $this->formCheckbox('reference_show_count', true,
+                array('checked' => (boolean) get_option('reference_show_count'))); ?>
+            <p class="explanation">
+                <?php echo __('Shows reference count beside reference name.'); ?>
+            </p>
+        </div>
+    </div>
 </fieldset>
+
 <fieldset id="fieldset-reference-tree"><legend><?php echo __('Hierarchy of Subjects'); ?></legend>
     <div class="field">
         <div class="two columns alpha">
@@ -205,7 +235,7 @@ Asia ↵
             </div>
             <p class="explanation">
                 <?php echo __('If any, write the hierarchy of all your subjects in order to display them in the "Hierarchy of Subjects" page.'); ?>
-                <?php echo __('Format is: one subjet by line, preceded by zero, one or more "-" to indicate the hierarchy level. Separate the "-" and the subject with a space. Empty lines are not considered.'); ?>
+                <?php echo __('Format is: one subject by line, preceded by zero, one or more "-" to indicate the hierarchy level. Separate the "-" and the subject with a space. Empty lines are not considered.'); ?>
             </p>
         </div>
     </div>
