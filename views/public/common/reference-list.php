@@ -8,18 +8,23 @@ if (count($references)):
 	// Prepare and display skip links.
 	if ($options['skiplinks']):
 		// Get the list of headers.
-		$letters = array('number' => false) + array_fill_keys(range('A', 'Z'), false);
+		$collator = new Collator('root');
+		uksort($references, array($collator, 'compare'));
+//		$letters = array('number' => false) + array_fill_keys(range('A', 'Z'), false) + array_fill_keys(array('Ĉ', 'Ĝ', 'Ĥ', 'Ĵ', 'Ŝ', 'Ŭ'), false);
+		$alphabet = array('A','B','C','Ĉ','D','E','È','F','G','Ĝ','H','Ĥ','I','J','Ĵ','K','L','M','N','O','P','Q','R','S','Ŝ','T','U','Ŭ','V','X','Y','W','Z');
+		$letters = array('number' => false) + array_fill_keys($alphabet, false);
 		foreach ($references as $reference => $referenceData):
-			$first_char = function_exists('mb_substr') ? mb_substr($reference, 0, 1) : substr($reference, 0, 1);
+			$first_char = mb_substr($reference, 0, 1, 'UTF-8');
 			if (strlen($first_char) == 0 || preg_match('/\W|\d/u', $first_char)):
 				$letters['number'] = true;
 			else:
-				$letters[strtoupper($first_char)] = true;
+				$first_char = mb_strtoupper($first_char, 'UTF-8');;
+				$letters[$first_char] = true;
 			endif;
 		endforeach;
 		$pagination_list = '<ul class="pagination_list">';
 		foreach ($letters as $letter => $isSet):
-			$letterDisplay = $letter == 'number' ? '#0-9' : $letter;
+			$letterDisplay = ($letter == 'number' ? '#0-9' : $letter);
 			if ($isSet):
 				$pagination_list .= sprintf('<li class="pagination_range"><a href="#%s">%s</a></li>', $letter, $letterDisplay);
 			else:
@@ -42,14 +47,14 @@ if (count($references)):
 	foreach ($references as $reference => $referenceData):
 		// Add the first character as header if wanted.
 		if ($options['headings']):
-			$first_char = function_exists('mb_substr') ? mb_substr($reference, 0, 1) : substr($reference, 0, 1);
+			$first_char = mb_substr($reference, 0, 1, 'UTF-8');
 			if (strlen($first_char) == 0 || preg_match('/\W|\d/u', $first_char)) {
 				$first_char = '#0-9';
 			}
-			$current_first_char = strtoupper($first_char);
+			$current_first_char = mb_strtoupper($first_char, 'UTF-8');
 			if ($current_heading !== $current_first_char):
 				$current_heading = $current_first_char;
-				$current_id = $current_heading === '#0-9' ? 'number' : $current_heading;
+				$current_id = ($current_heading === '#0-9' ? 'number' : $current_heading);
 	?>
 	<li><h3 class="reference-heading" id="<?php echo $current_id; ?>"><?php echo $current_heading; ?></h3></li>
 	<?php
