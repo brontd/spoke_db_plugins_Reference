@@ -443,7 +443,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 
 		$navItems = json_decode(get_option('public_navigation_main'), true) ?: array();
 		foreach ($navItems AS $key=>$navItem) {
-			if ($navItem['uid'] == '/references') {
+			if ($navItem['uid'] == '/' . self::REFERENCE_PATH_LIST) {
 				if ($navItem['label'] != $label) {
 					$navItems[$key]['label'] = $label;
 					$optionValue = json_encode($navItems);
