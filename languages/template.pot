@@ -16,222 +16,261 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ReferencePlugin.php:244
+#: ReferencePlugin.php:248
 msgid "Some slugs are empty."
 msgstr ""
 
-#: ReferencePlugin.php:245 ReferencePlugin.php:251
+#: ReferencePlugin.php:249
+#: ReferencePlugin.php:255
 msgid "Changes were reverted."
 msgstr ""
 
-#: ReferencePlugin.php:250
-msgid "Some slugs are not single."
+#: ReferencePlugin.php:254
+msgid "Some slugs are not unique."
 msgstr ""
 
-#: ReferencePlugin.php:306 views/public/index/browse.php:2
+#: ReferencePlugin.php:313
+#: browse.php:2
 msgid "References"
 msgstr ""
 
-#: ReferencePlugin.php:312
+#: ReferencePlugin.php:319
 msgid "Subjects Tree"
 msgstr ""
 
-#: ReferencePlugin.php:328
+#: ReferencePlugin.php:335
+msgid "Browse Metadata"
+msgstr ""
+
+#: ReferencePlugin.php:337
+msgid "Browse Item Types"
+msgstr ""
+
+#: ReferencePlugin.php:339
 msgid "Browse References"
 msgstr ""
 
-#: ReferencePlugin.php:334 views/public/index/tree.php:2
-#: views/admin/plugins/reference-config-form.php:144
+#: ReferencePlugin.php:349
+#: tree.php:2
+#: reference-config-form.php:191
 msgid "Hierarchy of Subjects"
 msgstr ""
 
-#: views/public/index/list.php:2
-#, php-format
+#: list.php:2
 msgid "Browse Items by \"%s\""
 msgstr ""
 
-#: views/public/index/list.php:8
-#, php-format
+#: list.php:8
 msgid "Browse Items By \"%s\" (%d Headings)"
 msgstr ""
 
-#: views/public/index/list.php:18
-#, php-format
+#: list.php:18
 msgid "There is no references for \"%s\"."
 msgstr ""
 
-#: views/public/index/tree.php:8
-#, php-format
+#: tree.php:8
 msgid "Hierarchy of Subjects (%d total)"
 msgstr ""
 
-#: views/public/index/tree.php:16
+#: tree.php:16
 msgid "There is no hierarchy of subjects."
 msgstr ""
 
-#: views/public/index/browse.php:14
-msgid "No references available."
+#: browse.php:3
+msgid "References"
 msgstr ""
 
-#: views/public/index/browse.php:22 views/public/index/browse.php:49
-#, php-format
-msgid "Browse %s"
-msgstr ""
-
-#: views/public/index/browse.php:43
-msgid "Main Types of Items"
-msgstr ""
-
-#: views/public/index/browse.php:43
+#: browse.php:5
 msgid "Metadata"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:9
+#: browse.php:7
+msgid "Item Types"
+msgstr ""
+
+#: browse.php:14
+msgid "No references available."
+msgstr ""
+
+#: browse.php:39
+msgid "Main Types of Items"
+msgstr ""
+
+#: browse.php:39
+msgid "Metadata"
+msgstr ""
+
+#: browse.php:49
+#: browse.php:56
+msgid "Browse %s"
+msgstr ""
+
+#: reference-config-form.php:11
+msgid "WARNING"
+msgstr ""
+
+#: reference-config-form.php:12
+msgid ""
+"There are too many elements and this form cannot be saved. Remove unused elements or "
+"increase the parameter 'max_input_vars' to %d or more in your php.ini."
+msgstr ""
+""
+""
+
+#: reference-config-form.php:15
 msgid "Reference"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:11
+#: reference-config-form.php:17
 msgid ""
 "Most of these options for list and for tree can be overridden in the theme."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:14
+#: reference-config-form.php:21
 msgid "References Indexes"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:17
+#: reference-config-form.php:24
 msgid "Display References"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:21
+#: reference-config-form.php:28
 msgid ""
 "Select the elements to display and define a slug so the references will be "
 "available at \"references/:slug\"."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:22
-msgid "Slugs should be single."
+#: reference-config-form.php:28
+msgid "Slugs should be unique."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:27
+#: reference-config-form.php:34
 msgid "Item Type / Element"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:28
+#: reference-config-form.php:35
 msgid "Display"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:29
+#: reference-config-form.php:36
 msgid "Slug"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:30
+#: reference-config-form.php:37
 msgid "Label"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:90
+#: reference-config-form.php:97
 msgid "Print skip links"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:96
+#: reference-config-form.php:103
 msgid ""
 "Print skip links at the top and bottom of each page, which link to the "
 "alphabetical headers."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:97
-msgid "Note that if headers are turned off, skip links do not work."
+#: reference-config-form.php:104
+msgid "Note that, if headers are turned off, skip links do not work."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:104
+#: reference-config-form.php:111
+msgid "Alphabetical headers"
+msgstr ""
+
+#: reference-config-form.php:116
+msgid "Sets the alphabetical headers to be used with skip links; headers are to be separated by blank space."
+msgstr ""
+
+#: reference-config-form.php:117
+msgid "If no value is given, default English alphabet will be used."
+msgstr ""
+
+#: reference-config-form.php:124
 msgid "Print headings"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:110
+#: reference-config-form.php:130
 msgid "Print headers for each section (#0-9 and symbols, A, B, etc.)"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:116
+#: reference-config-form.php:136
 msgid "Query Type"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:121
+#: reference-config-form.php:141
 msgid "Is Exactly"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:122
+#: reference-config-form.php:142
 msgid "Contains"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:126
-msgid ""
-"The type of query defines how elements are regrouped (see the advanced "
-"search)."
+#: reference-config-form.php:146
+msgid "The type of query defines how elements are regrouped (see the advanced search)."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:133
+#: reference-config-form.php:153
 msgid "Link to Single Records"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:139
+#: reference-config-form.php:159
 msgid ""
 "When a reference has only one item, link to it directly instead of to the "
 "items/browse page."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:150
+#: reference-config-form.php:166
 msgid "Hide empty references"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:156
+#: reference-config-form.php:172
 msgid "When a reference has no items, hides the correspondent link."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:166
-msgid "Show reference count"
+#: reference-config-form.php:179
+msgid "Show references count"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:172
+#: reference-config-form.php:185
 msgid "Shows reference count beside reference name."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:182
+#: reference-config-form.php:195
 msgid "Enable tree view"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:188
-#, php-format
+#: reference-config-form.php:201
 msgid ""
 "Enable the page and display the link \"%s\" to the hierarchical view in the "
 "navigation bar."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:196
+#: reference-config-form.php:209
 msgid "Expand tree"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:202
-#, fuzzy
+#: reference-config-form.php:215
 msgid "Check this box to display the tree expanded."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:203
+#: reference-config-form.php:216
 msgid "This option can be overridden by the theme."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:210
+#: reference-config-form.php:223
 msgid "Set the hierarchy of subjects"
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:237
+#: reference-config-form.php:250
 msgid ""
 "If any, write the hierarchy of all your subjects in order to display them in "
 "the \"Hierarchy of Subjects\" page."
 msgstr ""
 
-#: views/admin/plugins/reference-config-form.php:238
+#: reference-config-form.php:251
 msgid ""
-"Format is: one subject by line, preceded by zero, one or more \"-\" to "
-"indicate the hierarchy level. Separate the \"-\" and the subject with a "
-"space. Empty lines are not considered."
+"Format is: one subject per line, preceded by zero, one or more \"-\" to "
+"indicate the hierarchy level. Separate the \"-\" and the subject with an "
+"empty space. Empty lines are not considered."
 msgstr ""
