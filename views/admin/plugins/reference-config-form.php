@@ -9,7 +9,7 @@
 
 <?php if (($max = (count($slugs) * 3 + 20)) > ini_get('max_input_vars')): ?>
 <p><strong style="color:red;"><?php echo __('WARNING'); ?></strong></p>
-<p><?php echo __('There are too many elements and this form cannot be saved. Remove unused elements or increase the parameter "max_input_vars" to %d or more in your php.ini.', $max); ?></p>
+<p><?php echo __('There are too many elements and this form cannot be saved. Remove unused elements or increase the parameter \'max_input_vars\' to %d or more in your php.ini.', $max); ?></p>
 <?php endif; ?>
 
 <fieldset id="fieldset-reference-general"><legend><?php echo __('Reference'); ?></legend>
@@ -26,7 +26,7 @@
         <div class="inputs">
             <p class="explanation">
                 <?php echo __('Select the elements to display and define a slug so the references will be available at "references/:slug".'); ?>
-                <?php echo __('Slugs should be single.'); ?>
+                <?php echo __('Slugs should be unique.'); ?>
             </p>
             <table id="hide-elements-table">
                 <thead>
@@ -101,7 +101,20 @@
                 array('checked' => (boolean) get_option('reference_list_skiplinks'))); ?>
             <p class="explanation">
                 <?php echo __('Print skip links at the top and bottom of each page, which link to the alphabetical headers.'); ?>
-                <?php echo __('Note that if headers are turned off, skip links do not work.'); ?>
+                <?php echo __('Note that, if headers are turned off, skip links do not work.'); ?>
+            </p>
+        </div>
+    </div>
+    <div class="field">
+        <div class="two columns alpha">
+            <?php echo $this->formLabel('reference_list_alphabet',
+                __('Alphabetical headers')); ?>
+        </div>
+        <div class="inputs five columns omega">
+            <?php echo $this->formText('reference_list_alphabet', get_option('reference_list_alphabet'), null); ?>
+            <p class="explanation">
+                <?php echo __('Sets the alphabetical headers to be used with skip links; headers are to be separated by blank space.'); ?>
+                <?php echo __('If no value is given, default English alphabet will be used.'); ?>
             </p>
         </div>
     </div>
@@ -163,7 +176,7 @@
     <div class="field">
         <div class="two columns alpha">
             <?php echo $this->formLabel('reference_show_count',
-                __('Show reference count')); ?>
+                __('Show references count')); ?>
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox('reference_show_count', true,
@@ -235,7 +248,7 @@ Asia ↵
             </div>
             <p class="explanation">
                 <?php echo __('If any, write the hierarchy of all your subjects in order to display them in the "Hierarchy of Subjects" page.'); ?>
-                <?php echo __('Format is: one subject by line, preceded by zero, one or more "-" to indicate the hierarchy level. Separate the "-" and the subject with a space. Empty lines are not considered.'); ?>
+                <?php echo __('Format is: one subject per line, preceded by zero, one or more "-" to indicate the hierarchy level. Separate the "-" and the subject with an empty space. Empty lines are not considered.'); ?>
             </p>
         </div>
     </div>
