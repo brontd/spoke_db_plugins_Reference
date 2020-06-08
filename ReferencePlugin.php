@@ -7,6 +7,7 @@
  *
  * @copyright William Mayo 2011
  * @copyright Copyright Daniel Berthereau, 2014-2018
+ * @copyright Copyright Daniele Binaghi, 2020
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  * @package Reference
  */
@@ -55,6 +56,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 			),
 		),
 		'reference_list_skiplinks' => true,
+		'reference_list_alphabet' => '',
 		'reference_list_headings' => true,
 		'reference_link_to_single' => true,
 		'reference_hide_empty' => false,
@@ -249,7 +251,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 		}
 		$slugs = array_unique($slugs);
 		if (count($slugs) != $totalSlugs) {
-			$msg = __('Some slugs are not single.');
+			$msg = __('Some slugs are not unique.');
 			$msg .= ' ' . __('Changes were reverted.');
 			throw new Omeka_Validate_Exception($msg);
 		}
