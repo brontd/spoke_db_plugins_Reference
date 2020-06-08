@@ -10,8 +10,7 @@ if (count($references)):
 		// Get the list of headers.
 		$collator = new Collator('root');
 		uksort($references, array($collator, 'compare'));
-//		$letters = array('number' => false) + array_fill_keys(range('A', 'Z'), false) + array_fill_keys(array('Ĉ', 'Ĝ', 'Ĥ', 'Ĵ', 'Ŝ', 'Ŭ'), false);
-		$alphabet = array('A','B','C','Ĉ','D','E','È','F','G','Ĝ','H','Ĥ','I','J','Ĵ','K','L','M','N','O','P','Q','R','S','Ŝ','T','U','Ŭ','V','X','Y','W','Z');
+		$alphabet = (get_option('reference_list_alphabet') != '' ? explode(' ', get_option('reference_list_alphabet')) : array_fill_keys(range('A', 'Z'), false)); 
 		$letters = array('number' => false) + array_fill_keys($alphabet, false);
 		foreach ($references as $reference => $referenceData):
 			$first_char = mb_substr($reference, 0, 1, 'UTF-8');
