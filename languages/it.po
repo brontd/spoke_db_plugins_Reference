@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Reference\n"
 "Report-Msgid-Bugs-To: http://github.com/Daniel-KM/Reference/issues\n"
 "POT-Creation-Date: 2018-09-03 00:00+0200\n"
-"PO-Revision-Date: 2018-09-03 15:19+0200\n"
+"PO-Revision-Date: 2020-06-14 15:19+0200\n"
 "Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -71,7 +71,7 @@ msgstr "Non c'è alcun riferimento a \"%s\"."
 
 #: tree.php:8
 msgid "Hierarchy of Subjects (%d total)"
-msgstr "Gerarchia oggetti (totale: %d)"
+msgstr "Gerarchia soggetti (totale: %d)"
 
 #: tree.php:16
 msgid "There is no hierarchy of subjects."
