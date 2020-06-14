@@ -212,7 +212,7 @@
             <?php echo $this->formCheckbox('reference_tree_expanded', true,
                 array('checked' => (boolean) get_option('reference_tree_expanded'))); ?>
             <p class="explanation">
-                <?php echo __('Check this box to display the tree expanded.'); ?>
+                <?php echo __('When checked, the tree is displayed already expanded.'); ?>
                 <?php echo __('This option can be overridden by the theme.'); ?>
             </p>
         </div>
