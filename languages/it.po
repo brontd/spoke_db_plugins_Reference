@@ -2,292 +2,272 @@
 # This file is distributed under the same license as the Omeka plugin.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Reference\n"
 "Report-Msgid-Bugs-To: http://github.com/Daniel-KM/Reference/issues\n"
-"POT-Creation-Date: 2018-09-03 00:00+0200\n"
-"PO-Revision-Date: 2020-06-14 15:19+0200\n"
-"Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
-"Language-Team: \n"
-"Language: it\n"
+"POT-Creation-Date: 2017-09-18 00:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ReferencePlugin.php:248
 msgid "Some slugs are empty."
-msgstr "Alcuni slug sono vuoti."
+msgstr ""
 
 #: ReferencePlugin.php:249
 #: ReferencePlugin.php:255
 msgid "Changes were reverted."
-msgstr "Le modifiche sono state annullate."
+msgstr ""
 
 #: ReferencePlugin.php:254
 msgid "Some slugs are not unique."
-msgstr "Alcuni slug non sono univoci."
+msgstr ""
 
 #: ReferencePlugin.php:313
 #: browse.php:2
 msgid "References"
-msgstr "Riferimenti"
+msgstr ""
 
 #: ReferencePlugin.php:319
 msgid "Subjects Tree"
-msgstr "Gerarchia soggetti"
+msgstr ""
 
 #: ReferencePlugin.php:335
 msgid "Browse Metadata"
-msgstr "Sfoglia per metadati"
+msgstr ""
 
 #: ReferencePlugin.php:337
 msgid "Browse Item Types"
-msgstr "Sfoglia per tipologie documento"
+msgstr ""
 
 #: ReferencePlugin.php:339
 msgid "Browse References"
-msgstr "Sfoglia per riferimento"
+msgstr ""
 
 #: ReferencePlugin.php:349
 #: tree.php:2
 #: reference-config-form.php:191
 msgid "Hierarchy of Subjects"
-msgstr "Gerarchia soggetti"
+msgstr ""
 
 #: list.php:2
 msgid "Browse Items by \"%s\""
-msgstr "Sfoglia documenti per \"%s\""
+msgstr ""
 
 #: list.php:8
 msgid "Browse Items By \"%s\" (%d Headings)"
-msgstr "Sfoglia documenti per \"%s\" (%d intestazioni)"
+msgstr ""
 
 #: list.php:18
 msgid "There is no references for \"%s\"."
-msgstr "Non c'è alcun riferimento a \"%s\"."
+msgstr ""
 
 #: tree.php:8
 msgid "Hierarchy of Subjects (%d total)"
-msgstr "Gerarchia soggetti (totale: %d)"
+msgstr ""
 
 #: tree.php:16
 msgid "There is no hierarchy of subjects."
-msgstr "Non c'è alcuna gerarchia soggetti."
+msgstr ""
 
 #: browse.php:3
 msgid "References"
-msgstr "Riferimenti"
+msgstr ""
 
 #: browse.php:5
+#: browse.php:39
 msgid "Metadata"
-msgstr "Metadati"
+msgstr ""
 
 #: browse.php:7
 msgid "Item Types"
-msgstr "Tipologie documento"
+msgstr ""
 
 #: browse.php:14
 msgid "No references available."
-msgstr "Nessun riferimento disponibile."
+msgstr ""
 
 #: browse.php:39
-msgid "Main Types of Items"
-msgstr "Principali tipologie documento"
-
-#: browse.php:39
-msgid "Metadata"
-msgstr "Metadati"
+msgid "Main Item Types"
+msgstr ""
 
 #: browse.php:49
 #: browse.php:56
 msgid "Browse %s"
-msgstr "Sfoglia %s"
+msgstr ""
 
 #: reference-config-form.php:11
 msgid "WARNING"
-msgstr "ATTENZIONE"
+msgstr ""
 
 #: reference-config-form.php:12
 msgid ""
 "There are too many elements and this form cannot be saved. Remove unused elements or "
 "increase the parameter 'max_input_vars' to %d or more in your php.ini."
 msgstr ""
-"Ci sono troppi elementi e questo modulo non può essere salvato. Rimuovere gli elementi "
-"non utilizzati o aumentare il parametro 'max_input_vars" a %d o più nel file php.ini."
+""
+""
 
 #: reference-config-form.php:15
 msgid "Reference"
-msgstr "Riferimento"
+msgstr ""
 
 #: reference-config-form.php:17
 msgid ""
 "Most of these options for list and for tree can be overridden in the theme."
 msgstr ""
-"La maggior parte di queste opzioni per liste ed alberi possono essere sovrascritte nel tema."
 
 #: reference-config-form.php:21
 msgid "References Indexes"
-msgstr "Indici riferimenti"
+msgstr ""
 
 #: reference-config-form.php:24
 msgid "Display References"
-msgstr "Mostra riferimenti"
+msgstr ""
 
 #: reference-config-form.php:28
 msgid ""
 "Select the elements to display and define a slug so the references will be "
 "available at \"references/:slug\"."
 msgstr ""
-"Seleziona gli elementi da mostrare e definisci uno slug così che i riferimenti "
-"saranno disponibili alla pagina \"references/:slug\"."
 
 #: reference-config-form.php:28
 msgid "Slugs should be unique."
-msgstr "Gli slug dovrebbero essere univoci."
+msgstr ""
 
 #: reference-config-form.php:34
 msgid "Item Type / Element"
-msgstr "Tipo documento / elemento"
+msgstr ""
 
 #: reference-config-form.php:35
 msgid "Display"
-msgstr "Mostra"
+msgstr ""
 
 #: reference-config-form.php:36
 msgid "Slug"
-msgstr "Slug"
+msgstr ""
 
 #: reference-config-form.php:37
 msgid "Label"
-msgstr "Etichetta"
+msgstr ""
 
 #: reference-config-form.php:97
 msgid "Print skip links"
-msgstr "Inserire collegamenti 'vai a'"
+msgstr ""
 
 #: reference-config-form.php:103
 msgid ""
 "Print skip links at the top and bottom of each page, which link to the "
 "alphabetical headers."
 msgstr ""
-"Inserisce in cima e in fondo ad ogni pagina dei collegamenti 'vai a', "
-"per andare alle intestazioni alfabetiche."
 
 #: reference-config-form.php:104
 msgid "Note that, if headers are turned off, skip links do not work."
 msgstr ""
-"Notare che, se le intestazioni sono disattivate, 'vai a' non funzionerà."
 
 #: reference-config-form.php:111
 msgid "Alphabetical headers"
-msgstr "Intestazioni alfabetiche"
+msgstr ""
 
 #: reference-config-form.php:116
 msgid "Sets the alphabetical headers to be used with skip links; headers are to be separated by blank space."
-msgstr "Definisce le intestazioni alfabetiche da usarsi con i collegamenti 'vai a'; le intestazioni vanno 
-"separate tra loro da uno spazio bianco."
+msgstr ""
 
 #: reference-config-form.php:117
 msgid "If no value is given, default English alphabet will be used."
-msgstr "Se nessun valore è fornito, verrà usato l'alfabeto standard inglese."
+msgstr ""
 
 #: reference-config-form.php:124
 msgid "Print headings"
-msgstr "Inserire intestazioni"
+msgstr ""
 
 #: reference-config-form.php:130
 msgid "Print headers for each section (#0-9 and symbols, A, B, etc.)"
-msgstr "Inserisce le intestazioni per ogni sezione (#0-9 e simboli, A, B, ecc.)"
+msgstr ""
 
 #: reference-config-form.php:136
 msgid "Query Type"
-msgstr "Tipo richiesta"
+msgstr ""
 
 #: reference-config-form.php:141
 msgid "Is Exactly"
-msgstr "È esattamente"
+msgstr ""
 
 #: reference-config-form.php:142
 msgid "Contains"
-msgstr "Contiene"
+msgstr ""
 
 #: reference-config-form.php:146
 msgid "The type of query defines how elements are regrouped (see the advanced search)."
-msgstr "Il tipo di richiesta definisce come gli elementi vengono raggruppati (vedere la "
-"ricerca avanzata)."
+msgstr ""
 
 #: reference-config-form.php:153
 msgid "Link to Single Records"
-msgstr "Collegamento a record isolati"
+msgstr ""
 
 #: reference-config-form.php:159
 msgid ""
 "When a reference has only one item, link to it directly instead of to the "
 "items/browse page."
 msgstr ""
-"Quando un riferimento contiene un solo documento, collega direttamente ad "
-"esso invece che alla pagina items/browse."
 
 #: reference-config-form.php:166
 msgid "Hide empty references"
-msgstr "Nascondere riferimenti vuoti"
+msgstr ""
 
 #: reference-config-form.php:172
 msgid "When a reference has no items, hides the correspondent link."
-msgstr "Quando un riferimento non contiene alcun documento, nasconde il collegamento."
+msgstr ""
 
 #: reference-config-form.php:179
 msgid "Show references count"
-msgstr "Mostra conteggio riferimenti"
+msgstr ""
 
 #: reference-config-form.php:185
 msgid "Shows reference count beside reference name."
-msgstr "Mostra il conteggio dei riferimenti a fianco del loro nome."
+msgstr ""
 
 #: reference-config-form.php:195
 msgid "Enable tree view"
-msgstr "Attivare vista ad albero"
+msgstr ""
 
 #: reference-config-form.php:201
 msgid ""
 "Enable the page and display the link \"%s\" to the hierarchical view in the "
 "navigation bar."
 msgstr ""
-"Attiva la pagina e aggiunge il collegamento \"%s\" alla vista gerarchica nella "
-"barra di navigazione."
 
 #: reference-config-form.php:209
 msgid "Expand tree"
-msgstr "Espandere albero"
+msgstr ""
 
 #: reference-config-form.php:215
-msgid "When checked, the tree is displayed already expanded."
-msgstr "Quando selezionata, l'albero viene mostrato già espanso."
+msgid "Check this box to display the tree expanded."
+msgstr ""
 
 #: reference-config-form.php:216
 msgid "This option can be overridden by the theme."
-msgstr "Questa opzione può essere superata dal tema."
+msgstr ""
 
 #: reference-config-form.php:223
 msgid "Set the hierarchy of subjects"
-msgstr "Definire la gerarchia soggetti"
+msgstr ""
 
 #: reference-config-form.php:250
 msgid ""
 "If any, write the hierarchy of all your subjects in order to display them in "
 "the \"Hierarchy of Subjects\" page."
 msgstr ""
-"Se indicata, indica la gerarchia di tutti i soggetti per mostrarli nella pagina \"Gerarchia soggetti\"."
 
 #: reference-config-form.php:251
 msgid ""
-"Format is: one subject by line, preceded by zero, one or more \"-\" to "
+"Format is: one subject per line, preceded by zero, one or more \"-\" to "
 "indicate the hierarchy level. Separate the \"-\" and the subject with an "
 "empty space. Empty lines are not considered."
 msgstr ""
-"Il formato è: un soggetto per riga, preceduto da zero, uno o più  \"-\" "
-"per indicare il livello di gerarchia. Separare il \"-\" e il soggetto con "
-"uno spazio vuoto. Le righe vuote non vengono considerate."
