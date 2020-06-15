@@ -82,6 +82,7 @@ msgid "References"
 msgstr "Rilatoj"
 
 #: browse.php:5
+#: browse.php:39
 msgid "Metadata"
 msgstr "Metadatumoj"
 
@@ -94,17 +95,13 @@ msgid "No references available."
 msgstr "Neniu rilato disponebla."
 
 #: browse.php:39
-msgid "Main Types of Items"
-msgstr "Principali tipologie documento"
-
-#: browse.php:39
-msgid "Metadata"
-msgstr "Metadati"
+msgid "Main Item Types"
+msgstr "Ĉefaj eraj tipoj"
 
 #: browse.php:49
 #: browse.php:56
 msgid "Browse %s"
-msgstr "Esplori %s"
+msgstr "Esplori laŭ %s"
 
 #: reference-config-form.php:11
 msgid "WARNING"
