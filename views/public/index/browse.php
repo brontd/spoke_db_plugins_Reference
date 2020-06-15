@@ -1,11 +1,17 @@
 <?php
-$pageTitle = __('References');
+if (empty($types) || count($types) > 1) {
+	$pageTitle = __('References');
+} elseif ($types['Element']) {
+	$pageTitle = __('Metadata');
+} else {
+	$pageTitle = __('Item Types');
+}
 echo head(array(
 	'title' => $pageTitle,
 	'bodyclass' => 'reference',
 ));
-$reference_hide_empty = (boolean) get_option('reference_hide_empty');
-$reference_show_count = (boolean) get_option('reference_show_count');
+$reference_hide_empty = (bool) get_option('reference_hide_empty');
+$reference_show_count = (bool) get_option('reference_show_count');
 ?>
 <div id="primary">
 	<h1><?php echo $pageTitle; ?></h1>
@@ -30,7 +36,7 @@ $reference_show_count = (boolean) get_option('reference_show_count');
 			<?php endif; ?>
 			<li>
 			<?php
-				echo '<b>' . ($slugData['type'] == 'ItemType' ?  __('Main Types of Items') : __('Metadata')) . '</b>';
+				echo '<b>' . ($slugData['type'] == 'ItemType' ?  __('Main Item Types') : __('Metadata')) . '</b>';
 				$type = $slugData['type'];
 			?><ul>
 		<?php endif; ?>
@@ -38,14 +44,16 @@ $reference_show_count = (boolean) get_option('reference_show_count');
 			if (!$reference_hide_empty || $this->reference()->count($slug) > 0) {
 				echo '<li>';
 				if ($reference_show_count) {
-					echo sprintf('<a href="%s" title="%s">%s</a> (%d)',
+					echo sprintf(
+						'<a href="%s" title="%s">%s</a> (%d)',
 						html_escape(url(array('slug' => $slug), 'reference_list')),
 						__('Browse %s', $slugData['label']),
 						__($slugData['label']),
 						$this->reference()->count($slug)
 					);
 				} else {
-					echo sprintf('<a href="%s" title="%s">%s</a>',
+					echo sprintf(
+						'<a href="%s" title="%s">%s</a>',
 						html_escape(url(array('slug' => $slug), 'reference_list')),
 						__('Browse %s', $slugData['label']),
 						__($slugData['label'])
