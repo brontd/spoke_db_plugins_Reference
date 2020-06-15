@@ -1,7 +1,7 @@
 <?php
 if (count($references)):
-	$reference_hide_empty = (boolean) get_option('reference_hide_empty');
-	$reference_show_count = (boolean) get_option('reference_show_count');
+	$reference_hide_empty = (bool) get_option('reference_hide_empty');
+	$reference_show_count = (bool) get_option('reference_show_count');
 	$queryType = get_option('reference_query_type') == 'contains' ? 'contains' : 'is+exactly';
 	// Dublin Core Title is always 50.
 	$referenceId = $slugData['type'] == 'Element' ? $slugData['id'] : 50;
@@ -25,9 +25,16 @@ if (count($references)):
 		foreach ($letters as $letter => $isSet):
 			$letterDisplay = ($letter == 'number' ? '#0-9' : $letter);
 			if ($isSet):
-				$pagination_list .= sprintf('<li class="pagination_range"><a href="#%s">%s</a></li>', $letter, $letterDisplay);
+				$pagination_list .= sprintf(
+					'<li class="pagination_range"><a href="#%s">%s</a></li>', 
+					$letter, 
+					$letterDisplay
+				);
 			else:
-				$pagination_list .= sprintf('<li class="pagination_range"><span>%s</span></li>', $letterDisplay);
+				$pagination_list .= sprintf(
+					'<li class="pagination_range"><span>%s</span></li>', 
+					$letterDisplay
+				);
 			endif;
 		endforeach;
 		$pagination_list .= '</ul>';
@@ -40,7 +47,7 @@ if (count($references)):
 <div id="reference-headings">
 	<ul class="references" style="list-style-type:none"> 
 	<?php
-	$linkSingle = (boolean) get_option('reference_link_to_single');
+	$linkSingle = (bool) get_option('reference_link_to_single');
 	$current_heading = '';
 	$current_id = '';
 	foreach ($references as $reference => $referenceData):
@@ -72,8 +79,12 @@ if (count($references)):
 					if ($slugData['type'] == 'ItemType'):
 						$url .= 'type=' . $slugData['id'] . '&amp;';
 					endif;
-					$url .= sprintf('advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
-						$referenceId, $queryType, urlencode($reference));
+					$url .= sprintf(
+						'advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
+						$referenceId, 
+						$queryType,
+						urlencode($reference)
+					);
 					echo '<li><a href="' . url($url) . '">' . $reference . '</a>';
 					// Can be null when references are set directly.
 					if ($reference_show_count && $referenceData['count']) echo ' (' . $referenceData['count'] . ')';
@@ -89,10 +100,9 @@ if (count($references)):
 </div>
 
 	<?php if ($options['skiplinks']): ?>
-	
 <div class="pagination reference-pagination" id="pagination-bottom">
 	<?php echo $pagination_list; ?>
 </div>
-	
 	<?php endif;
+	
 endif;
