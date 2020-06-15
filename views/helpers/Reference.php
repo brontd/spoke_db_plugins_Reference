@@ -125,14 +125,14 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
 			// Reorder stripped data.
 			if (version_compare(PHP_VERSION, '5.4', '<')) {
 				$referencesList = array_keys($references);
-				natcasesort($referencesList);
+//				natcasesort($referencesList);
 				$refList = array();
 				foreach ($referencesList as $key) {
 					$refList[$key] = $references[$key];
 				}
 				$references = &$refList;
 			} else {
-				ksort($references , SORT_STRING | SORT_FLAG_CASE);
+				ksort($references, SORT_STRING | SORT_FLAG_CASE);
 			}
 		}
 
@@ -191,7 +191,7 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
 	 * </ul>
 	 * ";
 	 *
-	 * @param array $references Array of subjects elements to show.
+	 * @param array $subjects Array of subjects elements to show.
 	 * @param array $options Options to display the references. Values are booleans:
 	 * - raw: Show subjects as raw text, not links (default to false)
 	 * - strip: Remove html tags (default to true)
@@ -282,13 +282,13 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
 			))
 			->joinInner(array('items' => $db->Item), $elementTextsAlias . ".record_type = 'Item' AND items.id = $elementTextsAlias.record_id", array())
 			->where($elementTextsAlias . ".record_type = 'Item'")
-			->where($elementTextsAlias . '.element_id = ' . (integer) $elementId)
+			->where($elementTextsAlias . '.element_id = ' . (int) $elementId)
 			->group($elementTextsAlias . '.text')
 			->order($elementTextsAlias . '.text ASC' . " COLLATE 'utf8_unicode_ci'")
 			->order($elementTextsAlias . '.record_id ASC');
 
 		if ($slugData['type'] == 'ItemType') {
-			$select->where('items.item_type_id = ' . (integer) $slugData['id']);
+			$select->where('items.item_type_id = ' . (int) $slugData['id']);
 		}
 
 		$permissions = new Omeka_Db_Select_PublicPermissions('Items');
