@@ -81,6 +81,7 @@ msgid "References"
 msgstr ""
 
 #: browse.php:5
+#: browse.php:39
 msgid "Metadata"
 msgstr ""
 
@@ -93,11 +94,7 @@ msgid "No references available."
 msgstr ""
 
 #: browse.php:39
-msgid "Main Types of Items"
-msgstr ""
-
-#: browse.php:39
-msgid "Metadata"
+msgid "Main Item Types"
 msgstr ""
 
 #: browse.php:49
