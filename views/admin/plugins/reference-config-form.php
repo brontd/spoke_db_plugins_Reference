@@ -12,9 +12,9 @@
 <p><?php echo __('There are too many elements and this form cannot be saved. Remove unused elements or increase the parameter \'max_input_vars\' to %d or more in your php.ini.', $max); ?></p>
 <?php endif; ?>
 
-<fieldset id="fieldset-reference-general"><legend><?php echo __('Reference'); ?></legend>
+<fieldset id="fieldset-reference-general">
 	<p>
-		<?php echo __('Most of these options for list and for tree can be overridden in the theme.'); ?>
+		<?php echo __('Please note: most of these options for list and for tree can be overridden in the theme.'); ?>
 	</p>
 </fieldset>
 
@@ -224,6 +224,29 @@
 			); ?>
 			<p class="explanation">
 				<?php echo __('Shows reference count beside reference name.'); ?>
+			</p>
+		</div>
+	</div>
+	<div class="field">
+		<div class="two columns alpha">
+			<?php echo $this->formLabel(
+				'reference_link_columns',
+				__('References display mode')
+			); ?>
+		</div>
+		<div class="inputs five columns omega">
+			<?php echo $this->formSelect(
+				'reference_link_columns',
+				get_option('reference_link_columns'),
+				array(),
+				array(
+					'1' => __('Whole page'),
+					'2' => __('2 columns'),
+					'3' => __('3 columns')
+				)
+			); ?>
+			<p class="explanation">
+				<?php echo __('Type of layout for the reference links: single page with one column (best choice for few links), or list spread over 2 or 3 columns.'); ?>
 			</p>
 		</div>
 	</div>
