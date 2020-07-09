@@ -61,6 +61,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
 		'reference_link_to_single' => true,
 		'reference_hide_empty' => false,
 		'reference_show_count' => true,
+		'reference_link_columns' => 1,
 		'reference_tree_enabled' => false,
 		'reference_tree_expanded' => true,
 		'reference_tree_hierarchy' => '',
