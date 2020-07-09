@@ -21,7 +21,8 @@ $reference_show_count = (bool) get_option('reference_show_count');
 	<?php if (empty($types)): ?>
 		<p><?php echo __('No reference available.'); ?></p>
 	<?php else: ?>
-		<ul class='references' style="list-style-type:none; padding-left: 0">
+	<div id="reference-headings">
+		<ul class="reference-list" style="margin-top: 16px;">
 		<?php
 		// References are ordered: Item Types, then Elements.
 		$type = null;
@@ -31,18 +32,22 @@ $reference_show_count = (bool) get_option('reference_show_count');
 			if ($changedType):
 				if ($first):
 					$first = false;
-				else: ?>
-					</ul></li>
-			<?php endif; ?>
+				else: 
+					echo "</ul>";
+                    			echo "<ul class='reference-list' style='margin-top: 16px;'>";
+			    endif; 
+			?>
 			<li>
 			<?php
-				echo '<b>' . ($slugData['type'] == 'ItemType' ?  __('Main Item Types') : __('Metadata')) . '</b>';
+				echo '<h3 class="reference-heading">' . ($slugData['type'] == 'ItemType' ?  __('Main Item Types') : __('Metadata')) . '</h3>';
 				$type = $slugData['type'];
-			?><ul>
+			?>
+			</li>
 		<?php endif; ?>
+		
 		<?php 
 			if (!$reference_hide_empty || $this->reference()->count($slug) > 0) {
-				echo '<li>';
+				echo '<li class="reference-record">';
 				if ($reference_show_count) {
 					echo sprintf(
 						'<a href="%s" title="%s">%s</a> (%d)',
