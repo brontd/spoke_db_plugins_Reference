@@ -223,7 +223,7 @@
 				array('checked' => (bool) get_option('reference_show_count'))
 			); ?>
 			<p class="explanation">
-				<?php echo __('Shows reference count beside reference name.'); ?>
+				<?php echo __('Shows reference count beside reference name (if more than 1 Item).'); ?>
 			</p>
 		</div>
 	</div>
