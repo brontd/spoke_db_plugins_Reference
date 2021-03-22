@@ -240,8 +240,8 @@ msgid "Show references count"
 msgstr "Montri rilatan nombron"
 
 #: reference-config-form.php:185
-msgid "Shows reference count beside reference name."
-msgstr "Montras la nombron de rilatoj apud ilia nomo."
+msgid "Shows reference count beside reference name (if more than 1 Item)."
+msgstr "Montras la nombron de rilatoj apud ilia nomo (se pli ol 1 ero)."
 
 #: reference-config-form.php:195
 msgid "Enable tree view"

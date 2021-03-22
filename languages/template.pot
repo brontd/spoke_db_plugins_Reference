@@ -230,7 +230,7 @@ msgid "Show references count"
 msgstr ""
 
 #: reference-config-form.php:185
-msgid "Shows reference count beside reference name."
+msgid "Shows reference count beside reference name (if more than 1 Item)."
 msgstr ""
 
 #: reference-config-form.php:195

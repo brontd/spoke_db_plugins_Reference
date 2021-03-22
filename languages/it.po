@@ -241,8 +241,8 @@ msgid "Show references count"
 msgstr "Mostra conteggio riferimenti"
 
 #: reference-config-form.php:185
-msgid "Shows reference count beside reference name."
-msgstr "Mostra il conteggio dei riferimenti a fianco del loro nome."
+msgid "Shows reference count beside reference name (if more than 1 Item)."
+msgstr "Mostra il conteggio dei riferimenti a fianco del loro nome (se più di 1 Documento))."
 
 #: reference-config-form.php:195
 msgid "Enable tree view"
