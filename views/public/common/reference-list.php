@@ -82,7 +82,7 @@ if (count($references)):
 		<?php if (empty($options['raw'])):
 			if ($linkSingle && $referenceData['count'] === 1):
 				$record = get_record_by_id('Item', $referenceData['record_id']);
-				echo link_to($record, null, $reference) . ' (1)';
+				echo link_to($record, null, $reference);
 			else:
 				if (!$reference_hide_empty || $this->reference()->count($slug) > 0):
 					$url = 'items/browse?';
@@ -97,7 +97,7 @@ if (count($references)):
 					);
 					echo '<a href="' . url($url) . '">' . $reference . '</a>';
 					// Can be null when references are set directly.
-					if ($reference_show_count && $referenceData['count']) echo ' (' . $referenceData['count'] . ')';
+					if ($reference_show_count && $referenceData['count'] > 1) echo ' (' . $referenceData['count'] . ')';
 				endif;
 			endif;
 		else:
