@@ -33,7 +33,7 @@ msgstr "Alcuni slug non sono univoci."
 #: ReferencePlugin.php:313
 #: browse.php:2
 msgid "References"
-msgstr "Riferimenti"
+msgstr "Elenchi"
 
 #: ReferencePlugin.php:319
 msgid "Subjects Tree"
@@ -49,7 +49,7 @@ msgstr "Sfoglia per tipologie documento"
 
 #: ReferencePlugin.php:339
 msgid "Browse References"
-msgstr "Sfoglia per riferimento"
+msgstr "Sfoglia per elenchi"
 
 #: ReferencePlugin.php:349
 #: tree.php:2
@@ -67,7 +67,7 @@ msgstr "Sfoglia documenti per \"%s\" (%d intestazioni)"
 
 #: list.php:18
 msgid "There is no references for \"%s\"."
-msgstr "Non c'è alcun riferimento a \"%s\"."
+msgstr "Non c'è alcun elenco per \"%s\"."
 
 #: tree.php:8
 msgid "Hierarchy of Subjects (%d total)"
@@ -79,7 +79,7 @@ msgstr "Non c'è alcuna gerarchia soggetti."
 
 #: browse.php:3
 msgid "References"
-msgstr "Riferimenti"
+msgstr "Elenchi"
 
 #: browse.php:5
 #: browse.php:39
@@ -92,7 +92,7 @@ msgstr "Tipologie documento"
 
 #: browse.php:14
 msgid "No references available."
-msgstr "Nessun riferimento disponibile."
+msgstr "Nessun elenco disponibile."
 
 #: browse.php:39
 msgid "Main Item Types"
@@ -117,7 +117,7 @@ msgstr ""
 
 #: reference-config-form.php:15
 msgid "Reference"
-msgstr "Riferimento"
+msgstr "Elenco"
 
 #: reference-config-form.php:17
 msgid ""
@@ -127,19 +127,19 @@ msgstr ""
 
 #: reference-config-form.php:21
 msgid "References Indexes"
-msgstr "Indici riferimenti"
+msgstr "Indici elenchi"
 
 #: reference-config-form.php:24
 msgid "Display References"
-msgstr "Mostra riferimenti"
+msgstr "Mostra elenchi"
 
 #: reference-config-form.php:28
 msgid ""
 "Select the elements to display and define a slug so the references will be "
 "available at \"references/:slug\"."
 msgstr ""
-"Seleziona gli elementi da mostrare e definisci uno slug così che i riferimenti "
-"saranno disponibili alla pagina \"references/:slug\"."
+"Seleziona gli elementi da mostrare e definisci uno slug così che gli elenchi "
+"siano disponibili alla pagina \"references/:slug\"."
 
 #: reference-config-form.php:28
 msgid "Slugs should be unique."
@@ -225,24 +225,24 @@ msgid ""
 "When a reference has only one item, link to it directly instead of to the "
 "items/browse page."
 msgstr ""
-"Quando un riferimento contiene un solo documento, collega direttamente ad "
+"Quando un elenco contiene un solo documento, collega direttamente ad "
 "esso invece che alla pagina items/browse."
 
 #: reference-config-form.php:166
 msgid "Hide empty references"
-msgstr "Nascondere riferimenti vuoti"
+msgstr "Nascondere elenchi vuoti"
 
 #: reference-config-form.php:172
 msgid "When a reference has no items, hides the correspondent link."
-msgstr "Quando un riferimento non contiene alcun documento, nasconde il collegamento."
+msgstr "Quando un elenco non contiene alcun documento, nasconde il collegamento."
 
 #: reference-config-form.php:179
 msgid "Show references count"
-msgstr "Mostra conteggio riferimenti"
+msgstr "Mostra conteggio elenchi"
 
 #: reference-config-form.php:185
 msgid "Shows reference count beside reference name (if more than 1 Item)."
-msgstr "Mostra il conteggio dei riferimenti a fianco del loro nome (se più di 1 Documento))."
+msgstr "Mostra il conteggio degli elenchi a fianco del loro nome (se più di 1 Documento))."
 
 #: reference-config-form.php:195
 msgid "Enable tree view"
