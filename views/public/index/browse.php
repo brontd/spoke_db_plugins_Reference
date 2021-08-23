@@ -32,10 +32,10 @@ $reference_show_count = (bool) get_option('reference_show_count');
             if ($changedType):
                 if ($first):
                     $first = false;
-                else: 
+                else:
                     echo "</ul>";
                                 echo "<ul class='reference-list' style='margin-top: 16px;'>";
-                endif; 
+                endif;
             ?>
             <li>
             <?php
@@ -44,8 +44,8 @@ $reference_show_count = (bool) get_option('reference_show_count');
             ?>
             </li>
         <?php endif; ?>
-        
-        <?php 
+
+        <?php
             if (!$reference_hide_empty || $this->reference()->count($slug) > 0) {
                 echo '<li class="reference-record">';
                 if ($reference_show_count) {

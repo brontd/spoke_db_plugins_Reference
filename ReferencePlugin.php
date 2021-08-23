@@ -282,7 +282,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
                 set_option($optionKey, $post[$optionKey]);
             }
         }
-        
+
         $this->updatePublicNavigationMain($types);
     }
 
@@ -404,9 +404,9 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
         }
         return $view->reference()->displayTree($subjects, $args);
     }
-    
+
     /**
-     * Get the list of active reference types (Item Types, Metadata) 
+     * Get the list of active reference types (Item Types, Metadata)
      *
      * @return array or null
      */

@@ -12,7 +12,7 @@ if (count($references)):
         // Get the list of headers.
         $collator = new Collator('root');
         uksort($references, array($collator, 'compare'));
-        $alphabet = (get_option('reference_list_alphabet') != '' ? explode(' ', get_option('reference_list_alphabet')) : array_fill_keys(range('A', 'Z'), false)); 
+        $alphabet = (get_option('reference_list_alphabet') != '' ? explode(' ', get_option('reference_list_alphabet')) : array_fill_keys(range('A', 'Z'), false));
         $letters = array('number' => false) + array_fill_keys($alphabet, false);
 
         foreach ($references as $reference => $referenceData):
@@ -31,13 +31,13 @@ if (count($references)):
             $letterDisplay = ($letter == 'number' ? '#0-9' : $letter);
             if ($isSet):
                 $pagination_list .= sprintf(
-                    '<li class="pagination_range"><a href="#%s">%s</a></li>', 
-                    $letter, 
+                    '<li class="pagination_range"><a href="#%s">%s</a></li>',
+                    $letter,
                     $letterDisplay
                 );
             else:
                 $pagination_list .= sprintf(
-                    '<li class="pagination_range"><span>%s</span></li>', 
+                    '<li class="pagination_range"><span>%s</span></li>',
                     $letterDisplay
                 );
             endif;
@@ -51,7 +51,7 @@ if (count($references)):
     <?php endif; ?>
 
 <div id="reference-headings">
-    <div class="references" style="list-style-type:none; column-count: <?php echo $reference_link_columns; ?>"> 
+    <div class="references" style="list-style-type:none; column-count: <?php echo $reference_link_columns; ?>">
     <?php
     $linkSingle = (bool) get_option('reference_link_to_single');
     $current_heading = '';
@@ -91,7 +91,7 @@ if (count($references)):
                     endif;
                     $url .= sprintf(
                         'advanced[0][element_id]=%s&amp;advanced[0][type]=%s&amp;advanced[0][terms]=%s',
-                        $referenceId, 
+                        $referenceId,
                         $queryType,
                         urlencode($reference)
                     );
@@ -113,5 +113,5 @@ if (count($references)):
     <?php echo $pagination_list; ?>
 </div>
     <?php endif;
-    
+
 endif;

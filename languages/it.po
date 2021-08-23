@@ -184,7 +184,7 @@ msgstr "Intestazioni alfabetiche"
 
 #: reference-config-form.php:116
 msgid "Sets the alphabetical headers to be used with skip links; headers are to be separated by blank space."
-msgstr "Definisce le intestazioni alfabetiche da usarsi con i collegamenti 'vai a'; le intestazioni vanno 
+msgstr "Definisce le intestazioni alfabetiche da usarsi con i collegamenti 'vai a'; le intestazioni vanno
 "separate tra loro da uno spazio bianco."
 
 #: reference-config-form.php:117

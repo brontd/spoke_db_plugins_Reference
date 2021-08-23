@@ -85,7 +85,7 @@
                         <td class="reference-boxes">
                             <?php echo $this->formText(
                                 'labels' . $idKey,
-                                __($slugData['label']), 
+                                __($slugData['label']),
                                 null
                             ); ?>
                         </td>
@@ -104,7 +104,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_list_skiplinks', 
+                'reference_list_skiplinks',
                 true,
                 array('checked' => (bool) get_option('reference_list_skiplinks'))
             ); ?>
@@ -123,8 +123,8 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formText(
-                'reference_list_alphabet', 
-                get_option('reference_list_alphabet'), 
+                'reference_list_alphabet',
+                get_option('reference_list_alphabet'),
                 null
             ); ?>
             <p class="explanation">
@@ -142,7 +142,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_list_headings', 
+                'reference_list_headings',
                 true,
                 array('checked' => (bool) get_option('reference_list_headings'))
             ); ?>
@@ -161,9 +161,9 @@
         <div class='inputs five columns omega'>
             <?php
                 echo $this->formRadio(
-                    'reference_query_type', 
-                    get_option('reference_query_type') ?: 'is exactly', 
-                    null, 
+                    'reference_query_type',
+                    get_option('reference_query_type') ?: 'is exactly',
+                    null,
                     array(
                         'is exactly' => __('Is Exactly'),
                         'contains' => __('Contains'),
@@ -200,7 +200,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_hide_empty', 
+                'reference_hide_empty',
                 true,
                 array('checked' => (bool) get_option('reference_hide_empty'))
             ); ?>
@@ -218,7 +218,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_show_count', 
+                'reference_show_count',
                 true,
                 array('checked' => (bool) get_option('reference_show_count'))
             ); ?>
@@ -262,7 +262,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_tree_enabled', 
+                'reference_tree_enabled',
                 true,
                 array('checked' => (bool) get_option('reference_tree_enabled'))
             ); ?>
@@ -283,7 +283,7 @@
         </div>
         <div class="inputs five columns omega">
             <?php echo $this->formCheckbox(
-                'reference_tree_expanded', 
+                'reference_tree_expanded',
                 true,
                 array('checked' => (bool) get_option('reference_tree_expanded'))
             ); ?>
