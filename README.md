@@ -52,7 +52,7 @@ level.
 
 These contents can be displayed on any page via the helper `reference()`:
 
-```
+```php
 $slug = 'subject';
 $references = $this->reference()->getList($slug);
 echo $this->reference()->displayList($references, array(
@@ -64,7 +64,7 @@ echo $this->reference()->displayList($references, array(
 ```
 
 For tree view:
-```
+```php
 $subjects = $this->reference()->getTree();
 echo $this->reference()->displayTree($subjects, array(
     'expanded' => true,
