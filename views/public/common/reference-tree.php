@@ -24,14 +24,12 @@ if (count($subjects)):
                     // Nothing for the first level.
                 } elseif ($level > $previous_level) {
                     // Deeper level is always the next one.
-                }
-                // Higher level.
-                elseif ($level < $previous_level) {
-                    echo '</li>' . PHP_EOL . str_repeat('</ul></li>' . PHP_EOL, $previous_level - $level);
-                }
-                // First line, deeper or equal level.
-                else {
-                    echo '</li>' . PHP_EOL;
+                } elseif ($level < $previous_level) {
+                    // Higher level.
+                   echo '</li>' . PHP_EOL . str_repeat('</ul></li>' . PHP_EOL, $previous_level - $level);
+                } else {
+                    // First line, deeper or equal level.
+                     echo '</li>' . PHP_EOL;
                 }
 
                 // Start the line with or without a new sub-list.
@@ -60,7 +58,7 @@ if (count($subjects)):
 
                 $previous_level = $level;
             }
-            // Manage last liine.
+            // Manage last line.
             echo '</li>' . PHP_EOL . str_repeat('</ul></li>' . PHP_EOL, $previous_level);
         ?>
     </ul>

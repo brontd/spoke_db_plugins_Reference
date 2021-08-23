@@ -1,8 +1,8 @@
 .reference-pagination.pagination {
     display: inline-block;
     float: none;
-    margin: 12px 0;
-    padding: 0 0 1em;
+    margin: 0;
+    padding: 1em 0;
     height: auto;
     width: auto;
 }
@@ -19,23 +19,44 @@
 .reference-pagination li.pagination_range a,
 .reference-pagination li.pagination_range span {
     display: inline-block;
-    margin-right: 0px;
+    margin: 1px;
     padding: 0.375em 9px;
     vertical-align: top;
 }
 .reference-pagination li.pagination_range a {
-    border: 1px solid #000000;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+     background: linear-gradient(to top, #e2e2e2, #f8f8f8, #ffffff);
     text-decoration: none;
 }
 .reference-pagination li.pagination_range span {
     border: 1px solid transparent;
+    border-radius: 5px;
 }
 .reference-pagination li.pagination_range a:hover {
-    background-color: #CCCCCC;
+    background: #e2e2e2;
     color: #000;
     text-decoration: none;
 }
-
+.reference-heading {
+    display: block;
+    background: linear-gradient(to right, #e2e2e2, #f8f8f8, #ffffff);
+    border-radius: 3px;
+    color: #777;
+    margin-bottom: 8px;
+    padding: 4px 0 4px 8px;
+}
+.reference-list {
+    list-style-type:none; 
+    padding-left: 0;
+    margin-top: 0;
+}
+.reference-record {
+    margin-left: 6px;
+}
+.reference-list li+li {
+    margin-bottom: 5px;
+}
 ul.references {
     list-style: inside none disc;
 }

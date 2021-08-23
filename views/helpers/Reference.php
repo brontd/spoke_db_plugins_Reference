@@ -125,7 +125,7 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
             // Reorder stripped data.
             if (version_compare(PHP_VERSION, '5.4', '<')) {
                 $referencesList = array_keys($references);
-                natcasesort($referencesList);
+//                natcasesort($referencesList);
                 $refList = array();
                 foreach ($referencesList as $key) {
                     $refList[$key] = $references[$key];
@@ -191,11 +191,11 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
      * </ul>
      * ";
      *
-     * @param array $references Array of subjects elements to show.
+     * @param array $subjects Array of subjects elements to show.
      * @param array $options Options to display the references. Values are booleans:
      * - raw: Show subjects as raw text, not links (default to false)
      * - strip: Remove html tags (default to true)
-     * - expanded: Show tree as expanded (defaul to config)
+     * - expanded: Show tree as expanded (default to config)
      * @return string Html list.
      */
     public function displayTree($subjects, array $options = array())
@@ -299,7 +299,7 @@ class Reference_View_Helper_Reference extends Zend_View_Helper_Abstract
     }
 
     /**
-     * Get the dafault tree of subjects.
+     * Get the default tree of subjects.
      */
     protected function _getSubjectsTree()
     {

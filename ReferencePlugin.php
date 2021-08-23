@@ -7,6 +7,7 @@
  *
  * @copyright William Mayo 2011
  * @copyright Copyright Daniel Berthereau, 2014-2018
+ * @copyright Copyright Daniele Binaghi, 2020
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  * @package Reference
  */
@@ -55,9 +56,12 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
             ),
         ),
         'reference_list_skiplinks' => true,
+        'reference_list_alphabet' => '',
         'reference_list_headings' => true,
         'reference_link_to_single' => true,
         'reference_hide_empty' => false,
+        'reference_show_count' => true,
+        'reference_link_columns' => 1,
         'reference_tree_enabled' => false,
         'reference_tree_expanded' => true,
         'reference_tree_hierarchy' => '',
@@ -246,13 +250,14 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
         }
         $slugs = array_unique($slugs);
         if (count($slugs) != $totalSlugs) {
-            $msg = __('Some slugs are not single.');
+            $msg = __('Some slugs are not unique.');
             $msg .= ' ' . __('Changes were reverted.');
             throw new Omeka_Validate_Exception($msg);
         }
 
         // Rebuild the slugs data.
         $slugsData = array();
+        $types = array();
         foreach ($post['slugs'] as $type => $slugsById) {
             foreach ($slugsById as $id => $slug) {
                 $slugsData[$slug] = array();
@@ -260,6 +265,7 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
                 $slugsData[$slug]['type'] = $type;
                 $slugsData[$slug]['label'] = $post['labels'][$type][$id];
                 $slugsData[$slug]['active'] = $post['actives'][$type][$id];
+                if ($slugsData[$slug]['active']) $types[$type] = true;
             }
         }
 
@@ -276,6 +282,8 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
                 set_option($optionKey, $post[$optionKey]);
             }
         }
+        
+        $this->updatePublicNavigationMain($types);
     }
 
     /**
@@ -312,7 +320,6 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
                 'uri' => url(array(), 'reference_tree'),
             );
         }
-
         return $nav;
     }
 
@@ -323,8 +330,17 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function filterPublicNavigationItems($nav)
     {
+        $types = $this->getReferenceTypes();
+        if (isset($types['Element']) && $types['Element'] && count($types) == 1) {
+            $label = __('Browse Metadata');
+        } elseif (isset($types['ItemType']) && $types['ItemType'] && count($types) == 1) {
+            $label = __('Browse Item Types');
+        } else {
+            $label = __('Browse References');
+        }
+
         $nav['Browse References'] = array(
-            'label' => __('Browse References'),
+            'label' => $label,
             'uri' => url(array(), 'reference_base'),
         );
 
@@ -387,5 +403,56 @@ class ReferencePlugin extends Omeka_Plugin_AbstractPlugin
             }
         }
         return $view->reference()->displayTree($subjects, $args);
+    }
+    
+    /**
+     * Get the list of active reference types (Item Types, Metadata) 
+     *
+     * @return array or null
+     */
+    public function getReferenceTypes()
+    {
+        $slugs = json_decode(get_option('reference_slugs'), true) ?: array();
+        if (!empty($slugs)) {
+            // Remove disabled slugs.
+            foreach ($slugs as $slug => $slugData) {
+                if (empty($slugData['active'])) {
+                    unset($slugs[$slug]);
+                }
+            }
+        }
+
+        if (!empty($slugs)) {
+            $types = array();
+            foreach ($slugs as $slug => $slugData) {
+                $types[$slugData['type']] = true;
+            }
+            return $types;
+        } else {
+            return null;
+        }
+    }
+
+    public function updatePublicNavigationMain($types)
+    {
+        if (count($types) == 1 && isset($types['Element']) && $types['Element']) {
+            $label = 'Metadata';
+        } elseif (count($types) == 1 && isset($types['ItemType']) && $types['ItemType']) {
+            $label = 'Item Types';
+        } else {
+            $label = 'References';
+        }
+
+        $navItems = json_decode(get_option('public_navigation_main'), true) ?: array();
+        foreach ($navItems AS $key=>$navItem) {
+            if ($navItem['uid'] == '/' . self::REFERENCE_PATH_LIST) {
+                if ($navItem['label'] != $label) {
+                    $navItems[$key]['label'] = $label;
+                    $optionValue = json_encode($navItems);
+                    set_option('public_navigation_main', $optionValue);
+                    return true;
+                }
+            }
+        }
     }
 }

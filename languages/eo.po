@@ -2,272 +2,289 @@
 # This file is distributed under the same license as the Omeka plugin.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Reference\n"
 "Report-Msgid-Bugs-To: http://github.com/Daniel-KM/Reference/issues\n"
-"POT-Creation-Date: 2017-09-18 00:00+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-09-03 00:00+0200\n"
+"PO-Revision-Date: 2018-09-03 15:19+0200\n"
+"Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
+"Language-Team: \n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ReferencePlugin.php:248
 msgid "Some slugs are empty."
-msgstr ""
+msgstr "Iuj slug estas malplenaj."
 
 #: ReferencePlugin.php:249
 #: ReferencePlugin.php:255
 msgid "Changes were reverted."
-msgstr ""
+msgstr "Ŝanĝoj estis malfaritaj."
 
 #: ReferencePlugin.php:254
 msgid "Some slugs are not unique."
-msgstr ""
+msgstr "Iuj slug ne estas unuopaj."
 
 #: ReferencePlugin.php:313
 #: browse.php:2
 msgid "References"
-msgstr ""
+msgstr "Listoj"
 
 #: ReferencePlugin.php:319
 msgid "Subjects Tree"
-msgstr ""
+msgstr "Tema hierarkio"
 
 #: ReferencePlugin.php:335
 msgid "Browse Metadata"
-msgstr ""
+msgstr "Sfoglia per metadatumoj"
 
 #: ReferencePlugin.php:337
 msgid "Browse Item Types"
-msgstr ""
+msgstr "Esplori erajn tipojn"
 
 #: ReferencePlugin.php:339
 msgid "Browse References"
-msgstr ""
+msgstr "Esplori listojn"
 
 #: ReferencePlugin.php:349
 #: tree.php:2
 #: reference-config-form.php:191
 msgid "Hierarchy of Subjects"
-msgstr ""
+msgstr "Tema hierarkio"
 
 #: list.php:2
 msgid "Browse Items by \"%s\""
-msgstr ""
+msgstr "Esplori erojn laŭ \"%s\""
 
 #: list.php:8
 msgid "Browse Items By \"%s\" (%d Headings)"
-msgstr ""
+msgstr "Esplori erojn laŭ \"%s\" (%d titoloj)"
 
 #: list.php:18
 msgid "There is no references for \"%s\"."
-msgstr ""
+msgstr "Ekzistas neniu listo por \"%s\"."
 
 #: tree.php:8
 msgid "Hierarchy of Subjects (%d total)"
-msgstr ""
+msgstr "Tema hierarkio (%d entute)"
 
 #: tree.php:16
 msgid "There is no hierarchy of subjects."
-msgstr ""
+msgstr "Ekzistas neniu tema hierarkio."
 
 #: browse.php:3
 msgid "References"
-msgstr ""
+msgstr "Listoj"
 
 #: browse.php:5
 #: browse.php:39
 msgid "Metadata"
-msgstr ""
+msgstr "Metadatumoj"
 
 #: browse.php:7
 msgid "Item Types"
-msgstr ""
+msgstr "Eraj tipoj"
 
 #: browse.php:14
 msgid "No references available."
-msgstr ""
+msgstr "Neniu listo disponebla."
 
 #: browse.php:39
 msgid "Main Item Types"
-msgstr ""
+msgstr "Ĉefaj eraj tipoj"
 
 #: browse.php:49
 #: browse.php:56
 msgid "Browse %s"
-msgstr ""
+msgstr "Esplori laŭ %s"
 
 #: reference-config-form.php:11
 msgid "WARNING"
-msgstr ""
+msgstr "ATENTU"
 
 #: reference-config-form.php:12
 msgid ""
 "There are too many elements and this form cannot be saved. Remove unused elements or "
 "increase the parameter 'max_input_vars' to %d or more in your php.ini."
 msgstr ""
-""
-""
+"Estas tro multaj elementojn kaj la formularo ne povas esti savita. Forprenu neuzitajn elementojn aŭ"
+"grandigu la parametron 'max_input_vars" ĝis %d aŭ pli en la php.ini dosiero."
 
 #: reference-config-form.php:15
 msgid "Reference"
-msgstr ""
+msgstr "Listo"
 
 #: reference-config-form.php:17
 msgid ""
 "Most of these options for list and for tree can be overridden in the theme."
 msgstr ""
+"La plejparto de tiuj ĉi opcioj por listo kaj por arbo povas esti transpasitaj en la etoso."
 
 #: reference-config-form.php:21
 msgid "References Indexes"
-msgstr ""
+msgstr "Referencaj indeksoj"
 
 #: reference-config-form.php:24
 msgid "Display References"
-msgstr ""
+msgstr "Montri listojn"
 
 #: reference-config-form.php:28
 msgid ""
 "Select the elements to display and define a slug so the references will be "
 "available at \"references/:slug\"."
 msgstr ""
+"Elektu la elementojn por montri kaj slug-on tiel ke la listoj disponeblos ĉe la paĝo "
+"\"references/:slug\"."
 
 #: reference-config-form.php:28
 msgid "Slugs should be unique."
-msgstr ""
+msgstr "Slug devus esti unuopaj."
 
 #: reference-config-form.php:34
 msgid "Item Type / Element"
-msgstr ""
+msgstr "Era tipo / elemento"
 
 #: reference-config-form.php:35
 msgid "Display"
-msgstr ""
+msgstr "Montri"
 
 #: reference-config-form.php:36
 msgid "Slug"
-msgstr ""
+msgstr "Slug"
 
 #: reference-config-form.php:37
 msgid "Label"
-msgstr ""
+msgstr "Etikedo"
 
 #: reference-config-form.php:97
 msgid "Print skip links"
-msgstr ""
+msgstr "Aldoni saltligilojn"
 
 #: reference-config-form.php:103
 msgid ""
 "Print skip links at the top and bottom of each page, which link to the "
 "alphabetical headers."
 msgstr ""
+"Aldonas, je la supro kaj malsupro de ĉiu paĝo saltligilojn,"
+" kiuj ligas al la alfabetaj kapoj."
 
 #: reference-config-form.php:104
 msgid "Note that, if headers are turned off, skip links do not work."
 msgstr ""
+"Atentu ke, se la kapoj estas malŝaltitaj, saltligiloj ne funkcias."
 
 #: reference-config-form.php:111
 msgid "Alphabetical headers"
-msgstr ""
+msgstr "Alfabetaj kapleteroj"
 
 #: reference-config-form.php:116
 msgid "Sets the alphabetical headers to be used with skip links; headers are to be separated by blank space."
-msgstr ""
+msgstr "Starigas alfabetajn kapleterojn por uzi kun saltligiloj; kapleteroj devas apartiĝi per blanka spaco."
 
 #: reference-config-form.php:117
 msgid "If no value is given, default English alphabet will be used."
-msgstr ""
+msgstr "Se neniu valoro estas donita, la angla normala alfabeto estos uzita."
 
 #: reference-config-form.php:124
 msgid "Print headings"
-msgstr ""
+msgstr "Enkonduki kapleterojn"
 
 #: reference-config-form.php:130
 msgid "Print headers for each section (#0-9 and symbols, A, B, etc.)"
-msgstr ""
+msgstr "Aldonas kapleterojn por ĉiuj sekcioj (#0-9 kaj simboloj, A, B, ktp.)"
 
 #: reference-config-form.php:136
 msgid "Query Type"
-msgstr ""
+msgstr "Serĉmenda tipo"
 
 #: reference-config-form.php:141
 msgid "Is Exactly"
-msgstr ""
+msgstr "Estas ekzakte"
 
 #: reference-config-form.php:142
 msgid "Contains"
-msgstr ""
+msgstr "Entenas"
 
 #: reference-config-form.php:146
 msgid "The type of query defines how elements are regrouped (see the advanced search)."
-msgstr ""
+msgstr "La serĉmenda tipo difinas kiel elementoj estos regrupigitaj"
+" (vidu la altnivelan serĉon)."
 
 #: reference-config-form.php:153
 msgid "Link to Single Records"
-msgstr ""
+msgstr "Ligilo al unuopaj rikordoj"
 
 #: reference-config-form.php:159
 msgid ""
 "When a reference has only one item, link to it directly instead of to the "
 "items/browse page."
 msgstr ""
+"Kiam listo enhavas nur unu eron, rekte ligas al ĝi anstataŭ ol al"
+" items/browse paĝo."
 
 #: reference-config-form.php:166
 msgid "Hide empty references"
-msgstr ""
+msgstr "Kaŝi malplenajn listojn"
 
 #: reference-config-form.php:172
 msgid "When a reference has no items, hides the correspondent link."
-msgstr ""
+msgstr "Kiam listo havas neniun eron, kaŝas la korespondan ligilon."
 
 #: reference-config-form.php:179
 msgid "Show references count"
-msgstr ""
+msgstr "Montri rilatan nombron"
 
 #: reference-config-form.php:185
 msgid "Shows reference count beside reference name (if more than 1 Item)."
-msgstr ""
+msgstr "Montras la nombron de listoj apud ilia nomo (se pli ol 1 ero)."
 
 #: reference-config-form.php:195
 msgid "Enable tree view"
-msgstr ""
+msgstr "Ebligi arbovidon"
 
 #: reference-config-form.php:201
 msgid ""
 "Enable the page and display the link \"%s\" to the hierarchical view in the "
 "navigation bar."
 msgstr ""
+"Ebligas la paĝon kaj montras ligilon \"%s\" al la hierarkia vido en la "
+"naviga breto."
 
 #: reference-config-form.php:209
 msgid "Expand tree"
-msgstr ""
+msgstr "Etendu arbon"
 
 #: reference-config-form.php:215
-msgid "Check this box to display the tree expanded."
-msgstr ""
+msgid "When checked, the tree is displayed already expanded."
+msgstr "Kiam elektita, la arbo montriĝas plene etendita."
 
 #: reference-config-form.php:216
 msgid "This option can be overridden by the theme."
-msgstr ""
+msgstr "Tiu ĉi opcio povas esti transpasita en la etoso."
 
 #: reference-config-form.php:223
 msgid "Set the hierarchy of subjects"
-msgstr ""
+msgstr "Agordas la hierarkion de temoj"
 
 #: reference-config-form.php:250
 msgid ""
 "If any, write the hierarchy of all your subjects in order to display them in "
 "the \"Hierarchy of Subjects\" page."
 msgstr ""
+"Se ekzistas, montras la hierarkion de ĉiuj temoj por montri ilin en la"
+" \"Tema hierarkio\" paĝo."
 
 #: reference-config-form.php:251
 msgid ""
-"Format is: one subject per line, preceded by zero, one or more \"-\" to "
-"indicate the hierarchy level. Separate the \"-\" and the subject with an "
-"empty space. Empty lines are not considered."
+"Format is: one subject by line, preceded by zero, one or more \"-\" to "
+"indicate the hierarchy level. Separate the \"-\" and the subject with a "
+"space. Empty lines are not considered."
 msgstr ""
+"Formo estas: unu temo laŭ linio, antaŭigita per neniu, unu aŭ pli \"-\" "
+"por montri la hierarkian nivelon. Disigu la \"-\" kaj la temo per spaco. "
+"Malplenaj linioj ne estos konsiderataj."
