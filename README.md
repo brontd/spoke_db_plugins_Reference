@@ -151,7 +151,7 @@ Copyright
 * Copyright William Mayo, 2011
 * Copyright Philip Collins, 2013 ([jQuery tree view])
 * Copyright Daniel Berthereau, 2014-2018
-* Copyright Daniele Binaghi, 2020
+* Copyright Daniele Binaghi, 2020-2021
 
 [Omeka]: https://omeka.org
 [Reference]: https://github.com/Daniel-KM/Omeka-plugin-Reference
