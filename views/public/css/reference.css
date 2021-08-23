@@ -25,13 +25,13 @@
 }
 .reference-pagination li.pagination_range a {
     border: 1px solid #e2e2e2;
-	border-radius: 5px;
- 	background: linear-gradient(to top, #e2e2e2, #f8f8f8, #ffffff);
-	text-decoration: none;
+    border-radius: 5px;
+     background: linear-gradient(to top, #e2e2e2, #f8f8f8, #ffffff);
+    text-decoration: none;
 }
 .reference-pagination li.pagination_range span {
     border: 1px solid transparent;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 .reference-pagination li.pagination_range a:hover {
     background: #e2e2e2;
@@ -39,20 +39,20 @@
     text-decoration: none;
 }
 .reference-heading {
-	display: block;
-	background: linear-gradient(to right, #e2e2e2, #f8f8f8, #ffffff);
+    display: block;
+    background: linear-gradient(to right, #e2e2e2, #f8f8f8, #ffffff);
     border-radius: 3px;
     color: #777;
     margin-bottom: 8px;
     padding: 4px 0 4px 8px;
 }
 .reference-list {
-	list-style-type:none; 
-	padding-left: 0;
-	margin-top: 0;
+    list-style-type:none; 
+    padding-left: 0;
+    margin-top: 0;
 }
 .reference-record {
-	margin-left: 6px;
+    margin-left: 6px;
 }
 .reference-list li+li {
     margin-bottom: 5px;
