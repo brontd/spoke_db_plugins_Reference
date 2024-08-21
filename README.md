@@ -10,6 +10,18 @@ This plugin is upgradable to [Omeka S] via the plugin [Upgrade to Omeka S], that
 installs the module [Reference for Omeka S].
 
 
+Customizations
+--------------
+
+[Reference/views/public/common/reference-list.php](views/public/common/reference-list.php)
+
+[Reference/views/public/css/reference.css](/views/public/css/reference.css)
+
+[Reference/views/public/index/browse.php](//views/public/index/browse.php)
+
+
+
+
 Installation
 ------------
 
