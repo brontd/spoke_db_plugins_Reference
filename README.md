@@ -9,7 +9,7 @@ These lists can be displayed in any page via a helper or a shortcode.
 This plugin is upgradable to [Omeka S] via the plugin [Upgrade to Omeka S], that
 installs the module [Reference for Omeka S].
 
-
+---
 Customizations
 --------------
 
