@@ -17,9 +17,7 @@ Customizations
 
 [Reference/views/public/css/reference.css](/views/public/css/reference.css)
 
-[Reference/views/public/index/browse.php](//views/public/index/browse.php)
-
-
+[Reference/views/public/index/browse.php](/views/public/index/browse.php)
 
 
 Installation
