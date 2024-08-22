@@ -13,6 +13,12 @@ installs the module [Reference for Omeka S].
 Customizations
 --------------
 
+### Forked Repo
+
+Might need to sync if there are changes to source... otherwise, the following files have been customized.
+
+Should be able to download zip.
+
 [Reference/views/public/common/reference-list.php](views/public/common/reference-list.php)
 
 [Reference/views/public/css/reference.css](/views/public/css/reference.css)
